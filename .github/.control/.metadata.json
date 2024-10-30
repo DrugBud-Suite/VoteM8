@@ -1,5 +1,5 @@
 {
-   "abstract": "VoteM8 is a Python library for consensus scoring and ranking of multi-criteria data.  It implements multiple scoring methods including ECR, RbR, TOPSIS, VIKOR and others to combine different evaluation metrics into unified rankings.  The library supports customizable weights, handles missing values, and provides both normalization and aggregation options.  It includes a command-line interface and can process both CSV and SDF file formats, making it particularly useful for processing molecular docking scores and other scientific data requiring consensus analysis.",
+   "abstract": "VoteM8 is a Python library for consensus scoring and ranking of multi-criteria data. It implements multiple scoring methods including ECR, RbR, TOPSIS, VIKOR and others to combine different evaluation metrics into unified rankings. The library supports customizable weights, handles missing values, and provides both normalization and aggregation options. It includes a command-line interface and can process both CSV and SDF file formats, making it particularly useful for processing molecular docking scores and other scientific data requiring consensus analysis.",
    "announcement": {
       "path": "docs/website/announcement.html",
       "retention_days": 30,
@@ -510,7 +510,7 @@
       }
    },
    "citation": {
-      "abstract": "VoteM8 is a Python library for consensus scoring and ranking of multi-criteria data.  It implements multiple scoring methods including ECR, RbR, TOPSIS, VIKOR and others to combine different evaluation metrics into unified rankings.  The library supports customizable weights, handles missing values, and provides both normalization and aggregation options.  It includes a command-line interface and can process both CSV and SDF file formats, making it particularly useful for processing molecular docking scores and other scientific data requiring consensus analysis.",
+      "abstract": "VoteM8 is a Python library for consensus scoring and ranking of multi-criteria data. It implements multiple scoring methods including ECR, RbR, TOPSIS, VIKOR and others to combine different evaluation metrics into unified rankings. The library supports customizable weights, handles missing values, and provides both normalization and aggregation options. It includes a command-line interface and can process both CSV and SDF file formats, making it particularly useful for processing molecular docking scores and other scientific data requiring consensus analysis.",
       "authors": [
          "owner"
       ],
@@ -814,6 +814,26 @@
    },
    "discussion": {
       "category": {
+         "announcements": {
+            "id": "DIC_kwDONIKH_c4Cj1my",
+            "name": "Announcements"
+         },
+         "general": {
+            "id": "DIC_kwDONIKH_c4Cj1mz",
+            "name": "General"
+         },
+         "ideas": {
+            "id": "DIC_kwDONIKH_c4Cj1m1",
+            "name": "Ideas"
+         },
+         "polls": {
+            "id": "DIC_kwDONIKH_c4Cj1m3",
+            "name": "Polls"
+         },
+         "q-a": {
+            "id": "DIC_kwDONIKH_c4Cj1m0",
+            "name": "Q&A"
+         },
          "question_issues": {
             "form": {
                "body": [
@@ -896,6 +916,10 @@
                ],
                "title": "[General] "
             }
+         },
+         "show-and-tell": {
+            "id": "DIC_kwDONIKH_c4Cj1m2",
+            "name": "Show and tell"
          }
       }
    },
@@ -1055,7 +1079,7 @@
    },
    "highlights": [
       {
-         "description": "Implements 12 different consensus scoring methods including ECR, RbR, TOPSIS,  VIKOR, and Pareto rankings. Each method can be used individually or combined  for robust consensus analysis of complex datasets.",
+         "description": "Implements 12 different consensus scoring methods including ECR, RbR, TOPSIS, VIKOR, and Pareto rankings. Each method can be used individually or combined for robust consensus analysis of complex datasets.",
          "title": "Multiple Consensus Methods"
       },
       {
@@ -6639,7 +6663,25 @@
          "url": "https://github.com/DrugBud-Suite/VoteM8/blob/main/.github/CODEOWNERS"
       },
       "discussion": {
+         "announcements": [
+            "owner"
+         ],
+         "general": [
+            "owner"
+         ],
+         "ideas": [
+            "owner"
+         ],
+         "polls": [
+            "owner"
+         ],
+         "q-a": [
+            "owner"
+         ],
          "question_issues": [
+            "owner"
+         ],
+         "show-and-tell": [
             "owner"
          ]
       },
@@ -6976,7 +7018,7 @@
       },
       "file": {
          "__init__.py": {
-            "docstring": "VoteM8: VoteM8 - A Python package for consensus scoring.\n\nVoteM8 is a Python library for consensus scoring and ranking of multi-criteria data.  It implements multiple scoring methods including ECR, RbR, TOPSIS, VIKOR and others to combine different evaluation metrics into unified rankings.  The library supports customizable weights, handles missing values, and provides both normalization and aggregation options.  It includes a command-line interface and can process both CSV and SDF file formats, making it particularly useful for processing molecular docking scores and other scientific data requiring consensus analysis.\n\n\u00a9 2024 DrugM8\nSPDX-License-Identifier: MIT\n\n"
+            "docstring": "VoteM8: VoteM8 - A Python package for consensus scoring.\n\nVoteM8 is a Python library for consensus scoring and ranking of multi-criteria data. It implements multiple scoring methods including ECR, RbR, TOPSIS, VIKOR and others to combine different evaluation metrics into unified rankings. The library supports customizable weights, handles missing values, and provides both normalization and aggregation options. It includes a command-line interface and can process both CSV and SDF file formats, making it particularly useful for processing molecular docking scores and other scientific data requiring consensus analysis.\n\n\u00a9 2024 DrugM8\nSPDX-License-Identifier: MIT\n\n"
          }
       },
       "import_name": "votem8",
@@ -7095,8 +7137,8 @@
                      "align": "center"
                   },
                   "class": "menu",
-                  "color": "#0F3460",
-                  "color_dark": "#3A98B9",
+                  "color": "#992D72",
+                  "color_dark": "#9D41A1",
                   "height": "33px",
                   "items": [
                      {
@@ -7139,14 +7181,14 @@
                      "align": "justify"
                   },
                   "class": "paragraph",
-                  "content": "VoteM8 is a Python library for consensus scoring and ranking of multi-criteria data.  It implements multiple scoring methods including ECR, RbR, TOPSIS, VIKOR and others to combine different evaluation metrics into unified rankings.  The library supports customizable weights, handles missing values, and provides both normalization and aggregation options.  It includes a command-line interface and can process both CSV and SDF file formats, making it particularly useful for processing molecular docking scores and other scientific data requiring consensus analysis."
+                  "content": "VoteM8 is a Python library for consensus scoring and ranking of multi-criteria data. It implements multiple scoring methods including ECR, RbR, TOPSIS, VIKOR and others to combine different evaluation metrics into unified rankings. The library supports customizable weights, handles missing values, and provides both normalization and aggregation options. It includes a command-line interface and can process both CSV and SDF file formats, making it particularly useful for processing molecular docking scores and other scientific data requiring consensus analysis."
                },
                [
                   {
                      "class": "button",
-                     "color": "#2c2e30",
-                     "color_dark": "#2c2e30",
-                     "height": "23px",
+                     "color": "#992D72",
+                     "color_dark": "#9D41A1",
+                     "height": "15px",
                      "style": "plastic",
                      "text": "Keywords: "
                   },
@@ -7154,14 +7196,14 @@
                   {
                      "class": "buttons",
                      "color": [
-                        "#0F3460",
-                        "#562B08"
+                        "#992D72",
+                        "#2F2F2F"
                      ],
                      "color_dark": [
-                        "#3A98B9",
-                        "#E3651D"
+                        "#9D41A1",
+                        "#2F2F2F"
                      ],
-                     "height": "23px",
+                     "height": "15px",
                      "items": [
                         "consensus",
                         "scoring",
@@ -7176,8 +7218,8 @@
                      "align": "center"
                   },
                   "class": "menu",
-                  "color": "#562B08",
-                  "color_dark": "#E3651D",
+                  "color": "#2F2F2F",
+                  "color_dark": "#2F2F2F",
                   "height": "33px",
                   "items": [
                      {
@@ -7217,12 +7259,12 @@
                         "button": {
                            "align": "left",
                            "color": [
-                              "#0F3460",
-                              "#562B08"
+                              "#992D72",
+                              "#2F2F2F"
                            ],
                            "color_dark": [
-                              "#3A98B9",
-                              "#E3651D"
+                              "#9D41A1",
+                              "#2F2F2F"
                            ],
                            "height": "30px",
                            "style": "for-the-badge"
@@ -7230,7 +7272,7 @@
                         "class": "highlights",
                         "items": [
                            {
-                              "description": "Implements 12 different consensus scoring methods including ECR, RbR, TOPSIS,  VIKOR, and Pareto rankings. Each method can be used individually or combined  for robust consensus analysis of complex datasets.",
+                              "description": "Implements 12 different consensus scoring methods including ECR, RbR, TOPSIS, VIKOR, and Pareto rankings. Each method can be used individually or combined for robust consensus analysis of complex datasets.",
                               "title": "Multiple Consensus Methods"
                            },
                            {
@@ -7319,11 +7361,11 @@
             "typed": "pkg/src/votem8/py.typed"
          },
          "pkg_source": {
-            "my_new_project/__init__.py": "pkg/src/votem8/__init__.py",
-            "my_new_project/__main__.py": "pkg/src/votem8/__main__.py",
-            "my_new_project/data/__init__.py": "pkg/src/votem8/data/__init__.py",
-            "my_new_project/exception/__init__.py": "pkg/src/votem8/exception/__init__.py",
-            "my_new_project/exception/data.py": "pkg/src/votem8/exception/data.py"
+            "votem8/__init__.py": "pkg/src/votem8/__init__.py",
+            "votem8/__main__.py": "pkg/src/votem8/__main__.py",
+            "votem8/data/__init__.py": "pkg/src/votem8/data/__init__.py",
+            "votem8/exception/__init__.py": "pkg/src/votem8/exception/__init__.py",
+            "votem8/exception/data.py": "pkg/src/votem8/exception/data.py"
          },
          "pull_template": {
             "default": ".github/pull_request_template.md"
@@ -7339,9 +7381,9 @@
             "typed": "tests/src/votem8_testsuite/py.typed"
          },
          "test_source": {
-            "my_new_project_testsuite/__init__.py": "tests/src/votem8_testsuite/__init__.py",
-            "my_new_project_testsuite/__main__.py": "tests/src/votem8_testsuite/__main__.py",
-            "my_new_project_testsuite/data_tests.py": "tests/src/votem8_testsuite/data_tests.py"
+            "votem8_testsuite/__init__.py": "tests/src/votem8_testsuite/__init__.py",
+            "votem8_testsuite/__main__.py": "tests/src/votem8_testsuite/__main__.py",
+            "votem8_testsuite/data_tests.py": "tests/src/votem8_testsuite/data_tests.py"
          },
          "tool_config": {
             "codecov": ".github/.codecov.yml",
@@ -7458,8 +7500,8 @@
                      "align": "center"
                   },
                   "class": "menu",
-                  "color": "#0F3460",
-                  "color_dark": "#3A98B9",
+                  "color": "#992D72",
+                  "color_dark": "#9D41A1",
                   "height": "33px",
                   "items": [
                      {
@@ -7502,14 +7544,14 @@
                      "align": "justify"
                   },
                   "class": "paragraph",
-                  "content": "VoteM8 is a Python library for consensus scoring and ranking of multi-criteria data.  It implements multiple scoring methods including ECR, RbR, TOPSIS, VIKOR and others to combine different evaluation metrics into unified rankings.  The library supports customizable weights, handles missing values, and provides both normalization and aggregation options.  It includes a command-line interface and can process both CSV and SDF file formats, making it particularly useful for processing molecular docking scores and other scientific data requiring consensus analysis."
+                  "content": "VoteM8 is a Python library for consensus scoring and ranking of multi-criteria data. It implements multiple scoring methods including ECR, RbR, TOPSIS, VIKOR and others to combine different evaluation metrics into unified rankings. The library supports customizable weights, handles missing values, and provides both normalization and aggregation options. It includes a command-line interface and can process both CSV and SDF file formats, making it particularly useful for processing molecular docking scores and other scientific data requiring consensus analysis."
                },
                [
                   {
                      "class": "button",
-                     "color": "#2c2e30",
-                     "color_dark": "#2c2e30",
-                     "height": "23px",
+                     "color": "#992D72",
+                     "color_dark": "#9D41A1",
+                     "height": "15px",
                      "style": "plastic",
                      "text": "Keywords: "
                   },
@@ -7517,14 +7559,14 @@
                   {
                      "class": "buttons",
                      "color": [
-                        "#0F3460",
-                        "#562B08"
+                        "#992D72",
+                        "#2F2F2F"
                      ],
                      "color_dark": [
-                        "#3A98B9",
-                        "#E3651D"
+                        "#9D41A1",
+                        "#2F2F2F"
                      ],
-                     "height": "23px",
+                     "height": "15px",
                      "items": [
                         "consensus",
                         "scoring",
@@ -7539,8 +7581,8 @@
                      "align": "center"
                   },
                   "class": "menu",
-                  "color": "#562B08",
-                  "color_dark": "#E3651D",
+                  "color": "#2F2F2F",
+                  "color_dark": "#2F2F2F",
                   "height": "33px",
                   "items": [
                      {
@@ -7580,12 +7622,12 @@
                         "button": {
                            "align": "left",
                            "color": [
-                              "#0F3460",
-                              "#562B08"
+                              "#992D72",
+                              "#2F2F2F"
                            ],
                            "color_dark": [
-                              "#3A98B9",
-                              "#E3651D"
+                              "#9D41A1",
+                              "#2F2F2F"
                            ],
                            "height": "30px",
                            "style": "for-the-badge"
@@ -7593,7 +7635,7 @@
                         "class": "highlights",
                         "items": [
                            {
-                              "description": "Implements 12 different consensus scoring methods including ECR, RbR, TOPSIS,  VIKOR, and Pareto rankings. Each method can be used individually or combined  for robust consensus analysis of complex datasets.",
+                              "description": "Implements 12 different consensus scoring methods including ECR, RbR, TOPSIS, VIKOR, and Pareto rankings. Each method can be used individually or combined for robust consensus analysis of complex datasets.",
                               "title": "Multiple Consensus Methods"
                            },
                            {
@@ -8237,7 +8279,13 @@
          "discussions": {
             "home": "https://github.com/DrugBud-Suite/VoteM8/discussions",
             "new": {
-               "question_issues": "https://github.com/DrugBud-Suite/VoteM8/discussions/new?category=question_issues"
+               "announcements": "https://github.com/DrugBud-Suite/VoteM8/discussions/new?category=announcements",
+               "general": "https://github.com/DrugBud-Suite/VoteM8/discussions/new?category=general",
+               "ideas": "https://github.com/DrugBud-Suite/VoteM8/discussions/new?category=ideas",
+               "polls": "https://github.com/DrugBud-Suite/VoteM8/discussions/new?category=polls",
+               "q-a": "https://github.com/DrugBud-Suite/VoteM8/discussions/new?category=q-a",
+               "question_issues": "https://github.com/DrugBud-Suite/VoteM8/discussions/new?category=question_issues",
+               "show-and-tell": "https://github.com/DrugBud-Suite/VoteM8/discussions/new?category=show-and-tell"
             }
          },
          "home": "https://github.com/DrugBud-Suite/VoteM8",
@@ -8623,12 +8671,12 @@
    "theme": {
       "color": {
          "primary": {
-            "dark": "#3A98B9",
-            "light": "#0F3460"
+            "dark": "#9D41A1",
+            "light": "#992D72"
          },
          "secondary": {
-            "dark": "#E3651D",
-            "light": "#562B08"
+            "dark": "#2F2F2F",
+            "light": "#2F2F2F"
          }
       },
       "footer": [
@@ -8646,8 +8694,8 @@
                      "query": "$.copyright",
                      "url": "https://raw.githubusercontent.com/DrugBud-Suite/VoteM8/main/.github/.control/.metadata.json"
                   },
-                  "color": "#0F3460",
-                  "color_dark": "#3A98B9",
+                  "color": "#992D72",
+                  "color_dark": "#9D41A1",
                   "label": "VoteM8",
                   "link": "https://DrugBud-Suite.github.io/VoteM8",
                   "logo": "docs/website/source/_media/logo/favicon.svg",
@@ -8664,8 +8712,8 @@
                      "query": "$.license.expression",
                      "url": "https://raw.githubusercontent.com/DrugBud-Suite/VoteM8/main/.github/.control/.metadata.json"
                   },
-                  "color": "#562B08",
-                  "color_dark": "#E3651D",
+                  "color": "#2F2F2F",
+                  "color_dark": "#2F2F2F",
                   "label": "License",
                   "link": "https://DrugBud-Suite.github.io/VoteM8/about/license",
                   "service": "dynamic",
@@ -9738,7 +9786,7 @@
                "ogp_site_url": "https://DrugBud-Suite.github.io/VoteM8",
                "ogp_social_cards": {
                   "image": "_static/simple_light.svg",
-                  "line_color": "#0F3460"
+                  "line_color": "#992D72"
                },
                "ogp_use_first_image": true
             },
