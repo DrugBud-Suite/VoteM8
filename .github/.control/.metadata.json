@@ -9988,6 +9988,10 @@
             "html_context": {
                "pp_title_sep": ".\u2002"
             },
+            "html_css_files": [
+               "https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap",
+               "css/custom.css"
+            ],
             "html_extra_path": [],
             "html_favicon": "_media/logo/favicon.svg",
             "html_last_updated_fmt": "%b %d, %Y",
@@ -10242,6 +10246,10 @@
                "show_toc_level": 3,
                "sidebar_includehidden": true,
                "sidebarwidth": 270,
+               "theme_variables": {
+                  "font-family-base": "Quicksand, -apple-system, BlinkMacSystemFont, Segoe UI, \"Helvetica Neue\", Arial, sans-serif",
+                  "font-family-heading": "Quicksand, -apple-system, BlinkMacSystemFont, Segoe UI, \"Helvetica Neue\", Arial, sans-serif"
+               },
                "use_edit_page_button": true
             }
          },
