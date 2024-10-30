@@ -1,41 +1,32 @@
-name: My New Project
-title: A Placeholder Project Title
+name: VoteM8
+title: VoteM8 - A Python package for consensus scoring
 abstract: >-
-  Replace this text with a short abstract of ${{ name }}$,
-  describing its purpose and main features.
-  By default, this text is displayed on the repository's main README file,
-  on the homepage of the project's website,
-  on the project's PyPI and TestPyPI pages,
-  and on the package's main docstring.
-  Like all other entries in the repository's control center,
-  this text can also contain dynamic references to other entries,
-  using the <code>${‎{ json-path.to.value }}$</code> syntax.
-  By default, the first occurrence of the name of the project
-  in this text is styled as strong and linked to the project's website.
+  VoteM8 is a Python library for consensus scoring and ranking of multi-criteria data. 
+  It implements multiple scoring methods including ECR, RbR, TOPSIS, VIKOR and others to combine different evaluation metrics into unified rankings. 
+  The library supports customizable weights, handles missing values, and provides both normalization and aggregation options. 
+  It includes a command-line interface and can process both CSV and SDF file formats, making it particularly useful for processing molecular docking scores and other scientific data requiring consensus analysis.
 keywords:
-  - First Keyword
-  - Second Keyword
-  - Third Keyword
-  - Fourth Keyword
-  - Fifth Keyword
-  - Sixth Keyword
+  - consensus
+  - scoring
+  - molecular docking
+  - protein-ligand scoring
+  - virtual screening
 highlights:
-  - title: First Key Feature
+  - title: Multiple Consensus Methods
     description: >-
-      Description of the first key feature of ${{ name }}$.
-      By default, these highlights are displayed on the repository's main README file,
-      on the homepage of the project's website, and on the project's PyPI and TestPyPI pages.
-  - title: Second Key Feature
+      Implements 12 different consensus scoring methods including ECR, RbR, TOPSIS, 
+      VIKOR, and Pareto rankings. Each method can be used individually or combined 
+      for robust consensus analysis of complex datasets.
+  - title: Flexible Data Processing
     description: >-
-      Description of the second key feature of ${{ name }}$.
-      For aesthetic reasons, it is recommended to keep the descriptions of all items
-      in this list approximately the same length.
-  - title: Third Key Feature
+      Handles both CSV and SDF file formats with built-in missing value strategies,
+      customizable weights, and normalization options. Supports aggregation methods
+      and weighted criteria to adapt to different analysis needs.
+  - title: Command-Line Interface
     description: >-
-      Description of the third key feature of ${{ name }}$.
-      You can add as many keynotes as you want.
-      However, in order to keep the READMEs clean and tidy,
-      it is recommended to keep the number of keynotes between 3 and 7.
+      Provides an intuitive CLI for rapid analysis without coding. Users can specify
+      methods, columns, weights, and other parameters directly from the command line,
+      making it accessible for both programmers and non-programmers.
 license:
   expression: MIT
   header: |
@@ -45,6 +36,6 @@ maintainer:
   code_owners:
     entries:
       - glob: "*"
-        owners: [ owner ]
+        owners: [ Tonylac77 ]
 citation:
   title: '${{ name }}$: ${{ title }}$'
