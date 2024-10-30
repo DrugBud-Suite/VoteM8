@@ -14,9 +14,12 @@ SPDX-License-Identifier: MIT
 """
 
 from votem8 import data
-
-from votem8.votem8 import (apply_consensus_scoring, get_available_methods,
-                           describe_method, add_consensus_method)
+from votem8.votem8 import (
+    add_consensus_method,
+    apply_consensus_scoring,
+    describe_method,
+    get_available_methods,
+)
 
 __all__ = ["data", "__version_details__", "__version__"]
 
@@ -31,6 +34,8 @@ __author__ = "Antoine Lacour"
 __email__ = "alacournola+votem8@gmail.com"
 
 __all__ = [
-    "apply_consensus_scoring", "get_available_methods", "describe_method",
-    "add_consensus_method"
+    "apply_consensus_scoring",
+    "get_available_methods",
+    "describe_method",
+    "add_consensus_method",
 ]

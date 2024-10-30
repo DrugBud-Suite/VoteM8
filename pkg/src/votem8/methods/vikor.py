@@ -1,14 +1,13 @@
-import pandas as pd
 import numpy as np
-from pymcdm.methods import VIKOR
+import pandas as pd
 from pymcdm import weights as w
 from pymcdm.helpers import rrankdata
+from pymcdm.methods import VIKOR
 
 
-def VIKOR_consensus(df: pd.DataFrame,
-                    columns: list,
-                    id_column: str = "ID",
-                    weights=None) -> pd.DataFrame:
+def VIKOR_consensus(
+    df: pd.DataFrame, columns: list, id_column: str = "ID", weights=None
+) -> pd.DataFrame:
     """
     Calculates the VIKOR consensus score.
     """
@@ -25,5 +24,5 @@ def VIKOR_consensus(df: pd.DataFrame,
         weights_array = weights_array / weights_array.sum()
     vikor = VIKOR()
     types = np.ones(len(columns))
-    df['VIKOR'] = rrankdata(vikor(values, weights, types, v=0.5))
-    return df[[id_column, 'VIKOR']]
+    df["VIKOR"] = rrankdata(vikor(values, weights, types, v=0.5))
+    return df[[id_column, "VIKOR"]]

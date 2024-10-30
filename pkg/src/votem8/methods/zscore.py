@@ -11,5 +11,5 @@ def Zscore(
     """
     df = df[[id_column] + columns].copy()
     z_scores = (df[columns] - df[columns].mean()) / df[columns].std()
-    df['Zscore'] = z_scores.mean(axis=1)
-    return df[[id_column, 'Zscore']]
+    df["Zscore"] = z_scores.mean(axis=1)
+    return df[[id_column, "Zscore"]]

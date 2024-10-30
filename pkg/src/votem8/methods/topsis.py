@@ -1,13 +1,12 @@
-import pandas as pd
 import numpy as np
-from pymcdm.methods import TOPSIS
+import pandas as pd
 from pymcdm import weights as w
+from pymcdm.methods import TOPSIS
 
 
-def TOPSIS_consensus(df: pd.DataFrame,
-                     columns: list,
-                     id_column: str = "ID",
-                     weights=None) -> pd.DataFrame:
+def TOPSIS_consensus(
+    df: pd.DataFrame, columns: list, id_column: str = "ID", weights=None
+) -> pd.DataFrame:
     """
     Calculates the TOPSIS consensus score.
     """
@@ -24,5 +23,5 @@ def TOPSIS_consensus(df: pd.DataFrame,
         weights_array = weights_array / weights_array.sum()
     topsis = TOPSIS()
     types = np.ones(len(columns))
-    df['TOPSIS'] = topsis(values, weights, types)
-    return df[[id_column, 'TOPSIS']]
+    df["TOPSIS"] = topsis(values, weights, types)
+    return df[[id_column, "TOPSIS"]]

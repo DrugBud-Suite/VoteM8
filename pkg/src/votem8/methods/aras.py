@@ -1,13 +1,12 @@
-import pandas as pd
 import numpy as np
-from pymcdm.methods import ARAS
+import pandas as pd
 from pymcdm import weights as w
+from pymcdm.methods import ARAS
 
 
-def ARAS_consensus(df: pd.DataFrame,
-                   columns: list,
-                   id_column: str = "ID",
-                   weights=None) -> pd.DataFrame:
+def ARAS_consensus(
+    df: pd.DataFrame, columns: list, id_column: str = "ID", weights=None
+) -> pd.DataFrame:
     """
     Calculates the ARAS (ARAS) consensus score.
     """
@@ -24,5 +23,5 @@ def ARAS_consensus(df: pd.DataFrame,
         weights_array = weights_array / weights_array.sum()
     aras = ARAS()
     types = np.ones(len(columns))
-    df['ARAS'] = aras(values, weights, types)
-    return df[[id_column, 'ARAS']]
+    df["ARAS"] = aras(values, weights, types)
+    return df[[id_column, "ARAS"]]

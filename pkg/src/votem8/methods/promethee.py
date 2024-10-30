@@ -1,13 +1,12 @@
-import pandas as pd
 import numpy as np
-from pymcdm.methods import PROMETHEE_II
+import pandas as pd
 from pymcdm import weights as w
+from pymcdm.methods import PROMETHEE_II
 
 
-def PROMETHEE_II_consensus(df: pd.DataFrame,
-                           columns: list,
-                           id_column: str = "ID",
-                           weights=None) -> pd.DataFrame:
+def PROMETHEE_II_consensus(
+    df: pd.DataFrame, columns: list, id_column: str = "ID", weights=None
+) -> pd.DataFrame:
     """
     Calculates the PROMETHEE II consensus score.
     """
@@ -22,7 +21,7 @@ def PROMETHEE_II_consensus(df: pd.DataFrame,
         weights_array = np.array(weights, dtype=float)
         # Normalize weights to sum to 1
         weights_array = weights_array / weights_array.sum()
-    promethee = PROMETHEE_II('usual')
+    promethee = PROMETHEE_II("usual")
     types = np.ones(len(columns))
-    df['PROMETHEE_II'] = promethee(values, weights, types)
-    return df[[id_column, 'PROMETHEE_II']]
+    df["PROMETHEE_II"] = promethee(values, weights, types)
+    return df[[id_column, "PROMETHEE_II"]]

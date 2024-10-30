@@ -1,13 +1,12 @@
-import pandas as pd
 import numpy as np
-from pymcdm.methods import WASPAS
+import pandas as pd
 from pymcdm import weights as w
+from pymcdm.methods import WASPAS
 
 
-def WASPAS_consensus(df: pd.DataFrame,
-                     columns: list,
-                     id_column: str = "ID",
-                     weights=None) -> pd.DataFrame:
+def WASPAS_consensus(
+    df: pd.DataFrame, columns: list, id_column: str = "ID", weights=None
+) -> pd.DataFrame:
     """
     Calculates the WASPAS consensus score.
     """
@@ -24,5 +23,5 @@ def WASPAS_consensus(df: pd.DataFrame,
         weights_array = weights_array / weights_array.sum()
     waspas = WASPAS()
     types = np.ones(len(columns))
-    df['WASPAS'] = waspas(values, weights, types, l=0.5)
-    return df[[id_column, 'WASPAS']]
+    df["WASPAS"] = waspas(values, weights, types, l=0.5)
+    return df[[id_column, "WASPAS"]]

@@ -1,15 +1,13 @@
-import pandas as pd
 import numpy as np
-from pymcdm.methods import COMET, TOPSIS
+import pandas as pd
 from pymcdm import weights as w
-from pymcdm.helpers import rrankdata
+from pymcdm.methods import COMET, TOPSIS
 from pymcdm.methods.comet_tools import MethodExpert
 
 
-def COMET_consensus(df: pd.DataFrame,
-                    columns: list,
-                    id_column: str = "ID",
-                    weights=None) -> pd.DataFrame:
+def COMET_consensus(
+    df: pd.DataFrame, columns: list, id_column: str = "ID", weights=None
+) -> pd.DataFrame:
     """
     Calculates the COMET consensus score.
     """
@@ -28,5 +26,5 @@ def COMET_consensus(df: pd.DataFrame,
     c_values = COMET.make_cvalues(values)
     expert = MethodExpert(TOPSIS(), weights, types)
     comet = COMET(c_values, expert)
-    df['COMET'] = comet(values, weights, types)
-    return df[[id_column, 'COMET']]
+    df["COMET"] = comet(values, weights, types)
+    return df[[id_column, "COMET"]]

@@ -1,13 +1,12 @@
-import pandas as pd
 import numpy as np
-from pymcdm.methods import WPM
+import pandas as pd
 from pymcdm import weights as w
+from pymcdm.methods import WPM
 
 
-def WPM_consensus(df: pd.DataFrame,
-                  columns: list,
-                  id_column: str = "ID",
-                  weights=None) -> pd.DataFrame:
+def WPM_consensus(
+    df: pd.DataFrame, columns: list, id_column: str = "ID", weights=None
+) -> pd.DataFrame:
     """
     Calculates the WPM consensus score.
     """
@@ -24,5 +23,5 @@ def WPM_consensus(df: pd.DataFrame,
         weights_array = weights_array / weights_array.sum()
     wpm = WPM()
     types = np.ones(len(columns))
-    df['WPM'] = wpm(values, weights, types)
-    return df[[id_column, 'WPM']]
+    df["WPM"] = wpm(values, weights, types)
+    return df[[id_column, "WPM"]]

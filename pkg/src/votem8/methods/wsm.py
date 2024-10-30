@@ -1,13 +1,12 @@
-import pandas as pd
 import numpy as np
-from pymcdm.methods import WSM
+import pandas as pd
 from pymcdm import weights as w
+from pymcdm.methods import WSM
 
 
-def WSM_consensus(df: pd.DataFrame,
-                  columns: list,
-                  id_column: str = "ID",
-                  weights=None) -> pd.DataFrame:
+def WSM_consensus(
+    df: pd.DataFrame, columns: list, id_column: str = "ID", weights=None
+) -> pd.DataFrame:
     """
     Calculates the WSM consensus score.
     """
@@ -24,5 +23,5 @@ def WSM_consensus(df: pd.DataFrame,
         weights_array = weights_array / weights_array.sum()
     wsm = WSM()
     types = np.ones(len(columns))
-    df['WSM'] = wsm(values, weights, types)
-    return df[[id_column, 'WSM']]
+    df["WSM"] = wsm(values, weights, types)
+    return df[[id_column, "WSM"]]
