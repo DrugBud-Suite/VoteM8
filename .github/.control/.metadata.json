@@ -1,5 +1,5 @@
 {
-   "abstract": "Replace this text with a short abstract of My New Project, describing its purpose and main features. By default, this text is displayed on the repository's main README file, on the homepage of the project's website, on the project's PyPI and TestPyPI pages, and on the package's main docstring. Like all other entries in the repository's control center, this text can also contain dynamic references to other entries, using the <code>${\u200e{ json-path.to.value }}$</code> syntax. By default, the first occurrence of the name of the project in this text is styled as strong and linked to the project's website.",
+   "abstract": "VoteM8 is a Python library for consensus scoring and ranking of multi-criteria data.  It implements multiple scoring methods including ECR, RbR, TOPSIS, VIKOR and others to combine different evaluation metrics into unified rankings.  The library supports customizable weights, handles missing values, and provides both normalization and aggregation options.  It includes a command-line interface and can process both CSV and SDF file formats, making it particularly useful for processing molecular docking scores and other scientific data requiring consensus analysis.",
    "announcement": {
       "path": "docs/website/announcement.html",
       "retention_days": 30,
@@ -214,7 +214,7 @@
                "title": "Package Configurations."
             }
          ],
-         "title": "My New Project Changelog (Meta)"
+         "title": "VoteM8 Changelog (Meta)"
       },
       "package_private": {
          "entry": {
@@ -276,14 +276,14 @@
                "title": "\ud83c\udfa8 Style Changes"
             }
          ],
-         "title": "My New Project Changelog (Private API)"
+         "title": "VoteM8 Changelog (Private API)"
       },
       "pkg_api": {
          "entry": {
             "intro": "- Commit Type: {commit_type}\n- Commit Title: {commit_title}\n- Parent Commit: [{parent_commit_hash}]({parent_commit_url})\n",
             "title": "[{ver_dist}] \u2013 {date}"
          },
-         "intro": "This document records all changes to the public API of My New Project in each new final release.\nThe changes documented here are only those that affect the end-users of the software,\nsuch as added, changed, or removed features, bug fixes, and performance improvements.\n\nThe format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),\nand this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).\n",
+         "intro": "This document records all changes to the public API of VoteM8 in each new final release.\nThe changes documented here are only those that affect the end-users of the software,\nsuch as added, changed, or removed features, bug fixes, and performance improvements.\n\nThe format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),\nand this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).\n",
          "name": "Public API",
          "path": "CHANGELOG.md",
          "sections": [
@@ -338,14 +338,14 @@
                "title": "\ud83d\udcd4\ufe0f\u2002Release-Notes Fixes"
             }
          ],
-         "title": "My New Project Changelog - Public API"
+         "title": "VoteM8 Changelog - Public API"
       },
       "pkg_api_pre": {
          "entry": {
             "intro": "- Commit Type: {commit_type}\n- Commit Title: {commit_title}\n- Parent Commit: [{parent_commit_hash}]({parent_commit_url})\n",
             "title": "[{ver_dist}] \u2013 {date}"
          },
-         "intro": "This document records all changes to the public API of My New Project during a pre-release period.\nThe changes documented here are only those that affect the end-users of the software,\nsuch as added, changed, or removed features, bug fixes, and performance improvements.\n\nThe format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),\nand this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).\n",
+         "intro": "This document records all changes to the public API of VoteM8 during a pre-release period.\nThe changes documented here are only those that affect the end-users of the software,\nsuch as added, changed, or removed features, bug fixes, and performance improvements.\n\nThe format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),\nand this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).\n",
          "name": "Pre-release Public API",
          "path": "CHANGELOG_PRERELEASE.md",
          "sections": [
@@ -400,7 +400,7 @@
                "title": "\ud83d\udcd4\ufe0f\u2002Release-Notes Fixes"
             }
          ],
-         "title": "My New Project Changelog - Pre-release Public API"
+         "title": "VoteM8 Changelog - Pre-release Public API"
       },
       "tests": {
          "entry": {
@@ -462,7 +462,7 @@
                "title": "\ud83c\udfa8 Style Changes"
             }
          ],
-         "title": "My New Project Changelog (Test Suite)"
+         "title": "VoteM8 Changelog (Test Suite)"
       },
       "website": {
          "entry": {
@@ -489,7 +489,7 @@
                "title": "Backend"
             }
          ],
-         "title": "My New Project Changelog (Website)"
+         "title": "VoteM8 Changelog (Website)"
       },
       "workflows": {
          "entry": {
@@ -506,11 +506,11 @@
                "title": "Workflows"
             }
          ],
-         "title": "My New Project Changelog (Workflows)"
+         "title": "VoteM8 Changelog (Workflows)"
       }
    },
    "citation": {
-      "abstract": "Replace this text with a short abstract of My New Project, describing its purpose and main features. By default, this text is displayed on the repository's main README file, on the homepage of the project's website, on the project's PyPI and TestPyPI pages, and on the package's main docstring. Like all other entries in the repository's control center, this text can also contain dynamic references to other entries, using the <code>${\u200e{ json-path.to.value }}$</code> syntax. By default, the first occurrence of the name of the project in this text is styled as strong and linked to the project's website.",
+      "abstract": "VoteM8 is a Python library for consensus scoring and ranking of multi-criteria data.  It implements multiple scoring methods including ECR, RbR, TOPSIS, VIKOR and others to combine different evaluation metrics into unified rankings.  The library supports customizable weights, handles missing values, and provides both normalization and aggregation options.  It includes a command-line interface and can process both CSV and SDF file formats, making it particularly useful for processing molecular docking scores and other scientific data requiring consensus analysis.",
       "authors": [
          "owner"
       ],
@@ -518,21 +518,20 @@
          "owner"
       ],
       "keywords": [
-         "First Keyword",
-         "Second Keyword",
-         "Third Keyword",
-         "Fourth Keyword",
-         "Fifth Keyword",
-         "Sixth Keyword"
+         "consensus",
+         "scoring",
+         "molecular docking",
+         "protein-ligand scoring",
+         "virtual screening"
       ],
       "language": "eng",
       "license": "MIT",
-      "message": "If you use My New Project, please cite it using this reference.",
+      "message": "If you use VoteM8, please cite it using this reference.",
       "repository": {
-         "build": "https://pypi.org/project/My-New-Project",
+         "build": "https://pypi.org/project/VoteM8",
          "source": "https://github.com/DrugBud-Suite/VoteM8"
       },
-      "title": "My New Project: A Placeholder Project Title",
+      "title": "VoteM8: VoteM8 - A Python package for consensus scoring",
       "type": "software",
       "url": "https://DrugBud-Suite.github.io/VoteM8"
    },
@@ -1024,10 +1023,10 @@
                      "align": "justify"
                   },
                   "class": "paragraph",
-                  "content": "Welcome to the <em>My New Project</em> community!\nWe are excited to have you here,\nand grateful that you are considering contributing.\nMy New Project is a free and open-source project that evolves with the needs of its users,\nand can only grow through the help of great members like you.\n"
+                  "content": "Welcome to the <em>VoteM8</em> community!\nWe are excited to have you here,\nand grateful that you are considering contributing.\nVoteM8 is a free and open-source project that evolves with the needs of its users,\nand can only grow through the help of great members like you.\n"
                }
             ],
-            "heading": "My New Project Contributing Guidelines",
+            "heading": "VoteM8 Contributing Guidelines",
             "section": [
                {
                   "body": [
@@ -1056,16 +1055,16 @@
    },
    "highlights": [
       {
-         "description": "Description of the first key feature of My New Project. By default, these highlights are displayed on the repository's main README file, on the homepage of the project's website, and on the project's PyPI and TestPyPI pages.",
-         "title": "First Key Feature"
+         "description": "Implements 12 different consensus scoring methods including ECR, RbR, TOPSIS,  VIKOR, and Pareto rankings. Each method can be used individually or combined  for robust consensus analysis of complex datasets.",
+         "title": "Multiple Consensus Methods"
       },
       {
-         "description": "Description of the second key feature of My New Project. For aesthetic reasons, it is recommended to keep the descriptions of all items in this list approximately the same length.",
-         "title": "Second Key Feature"
+         "description": "Handles both CSV and SDF file formats with built-in missing value strategies, customizable weights, and normalization options. Supports aggregation methods and weighted criteria to adapt to different analysis needs.",
+         "title": "Flexible Data Processing"
       },
       {
-         "description": "Description of the third key feature of My New Project. You can add as many keynotes as you want. However, in order to keep the READMEs clean and tidy, it is recommended to keep the number of keynotes between 3 and 7.",
-         "title": "Third Key Feature"
+         "description": "Provides an intuitive CLI for rapid analysis without coding. Users can specify methods, columns, weights, and other parameters directly from the command line, making it accessible for both programmers and non-programmers.",
+         "title": "Command-Line Interface"
       }
    ],
    "issue": {
@@ -1087,7 +1086,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -1099,7 +1098,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for reporting a <b>non-security-related bug in My-New-Project's API</b>, i.e. an unexpected behavior or result in My-New-Project's Python application programming interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for reporting a <b>non-security-related bug in VoteM8's API</b>, i.e. an unexpected behavior or result in VoteM8's Python application programming interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -1126,11 +1125,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: pkg_api_fix -->",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: pkg_api_fix -->",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -1202,7 +1201,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select the package manager used to download and install My New Project.\n",
+                     "description": "Please select the package manager used to download and install VoteM8.\n",
                      "label": "Package Manager",
                      "multiple": false,
                      "options": [
@@ -1236,7 +1235,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -1256,7 +1255,7 @@
                      "label": "API Entry Point",
                      "multiple": false,
                      "options": [
-                        "my_new_project"
+                        "votem8"
                      ]
                   },
                   "id": "entrypoint",
@@ -1267,7 +1266,7 @@
                },
                {
                   "attributes": {
-                     "description": "Please provide the fully qualified name (minus the entry point) of the relevant API endpoint. For example, for a method at `my_new_project.module_name.ClassName.method_name` in the entry point `my_new_project`, you should write `module_name.ClassName.method_name`.",
+                     "description": "Please provide the fully qualified name (minus the entry point) of the relevant API endpoint. For example, for a method at `votem8.module_name.ClassName.method_name` in the entry point `votem8`, you should write `module_name.ClassName.method_name`.",
                      "label": "Fully Qualified Name",
                      "placeholder": "module_name.ClassName.method_name"
                   },
@@ -1293,7 +1292,7 @@
                      "description": "Please provide a [test case](https://docs.pytest.org/en/stable/getting-started.html) that demonstrates the bug:\n- At the top of the code block below, add the minimum number of imports required to reproduce the bug.\n- Replace the ellipsis (`...`) in the `test` function with a [Minimal Reproducible Example](https://stackoverflow.com/help/minimal-reproducible-example) (MRE). Use [`assert` statements](https://docs.pytest.org/en/stable/how-to/assert.html) to specify the expected results.",
                      "label": "Test Case",
                      "render": "python",
-                     "value": "import my_new_project\n\n\ndef test():\n    ...\n"
+                     "value": "import votem8\n\n\ndef test():\n    ...\n"
                   },
                   "id": "test_case",
                   "type": "textarea",
@@ -1302,7 +1301,7 @@
                   }
                }
             ],
-            "description": "Report problems and errors in My-New-Project's API.",
+            "description": "Report problems and errors in VoteM8's API.",
             "id": "pkg_api_fix",
             "name": "\u2002\ud83d\udda5\u2002API\u2002\ud83d\udc1e\u2002Bug Report",
             "post_process": {
@@ -1318,7 +1317,7 @@
             "pre_process": {
                "if_any": [
                   [
-                     "my_new_project"
+                     "votem8"
                   ]
                ]
             },
@@ -1329,7 +1328,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -1341,7 +1340,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for reporting a <b>non-security-related bug in My-New-Project's CLI</b>, i.e. an unexpected behavior or result in My-New-Project's command-line interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for reporting a <b>non-security-related bug in VoteM8's CLI</b>, i.e. an unexpected behavior or result in VoteM8's command-line interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -1368,11 +1367,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: pkg_cli_fix -->",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: pkg_cli_fix -->",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -1444,7 +1443,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select the package manager used to download and install My New Project.\n",
+                     "description": "Please select the package manager used to download and install VoteM8.\n",
                      "label": "Package Manager",
                      "multiple": false,
                      "options": [
@@ -1478,7 +1477,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -1498,7 +1497,7 @@
                      "label": "CLI Entry Point",
                      "multiple": false,
                      "options": [
-                        "My-New-Project"
+                        "VoteM8"
                      ]
                   },
                   "id": "entrypoint",
@@ -1532,7 +1531,7 @@
                   }
                }
             ],
-            "description": "Report problems and errors in My-New-Project's CLI.",
+            "description": "Report problems and errors in VoteM8's CLI.",
             "id": "pkg_cli_fix",
             "name": "\u2002\u2328\ufe0f\u2002CLI\u2002\ud83d\udc1e\u2002Bug Report",
             "post_process": {
@@ -1548,7 +1547,7 @@
             "pre_process": {
                "if_any": [
                   [
-                     "My-New-Project"
+                     "VoteM8"
                   ]
                ]
             },
@@ -1559,7 +1558,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -1571,7 +1570,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for reporting a <b>non-security-related bug in My-New-Project's GUI</b>, i.e. an unexpected behavior or result in My-New-Project's graphical user interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for reporting a <b>non-security-related bug in VoteM8's GUI</b>, i.e. an unexpected behavior or result in VoteM8's graphical user interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -1598,11 +1597,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -1674,7 +1673,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select the package manager used to download and install My New Project.\n",
+                     "description": "Please select the package manager used to download and install VoteM8.\n",
                      "label": "Package Manager",
                      "multiple": false,
                      "options": [
@@ -1708,7 +1707,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -1771,7 +1770,7 @@
                   }
                }
             ],
-            "description": "Report problems and errors in My-New-Project's GUI.",
+            "description": "Report problems and errors in VoteM8's GUI.",
             "id": "pkg_gui_fix",
             "name": "\u2002\ud83d\uddb1\u2002GUI\u2002\ud83d\udc1e\u2002Bug Report",
             "post_process": {
@@ -1796,7 +1795,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -1808,7 +1807,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for reporting a <b>non-security-related bug in My New Project's setup process</b>, i.e. an unexpected behavior that occurs during the download, installation, or initialization of the application.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for reporting a <b>non-security-related bug in VoteM8's setup process</b>, i.e. an unexpected behavior that occurs during the download, installation, or initialization of the application.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -1835,11 +1834,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: pkg_setup_fix -->",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: pkg_setup_fix -->",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -1911,7 +1910,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select the package manager used to download and install My New Project.\n",
+                     "description": "Please select the package manager used to download and install VoteM8.\n",
                      "label": "Package Manager",
                      "multiple": false,
                      "options": [
@@ -1945,7 +1944,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -1994,7 +1993,7 @@
                   }
                }
             ],
-            "description": "Report problems in downloading, installation, or initialization of My-New-Project.",
+            "description": "Report problems in downloading, installation, or initialization of VoteM8.",
             "id": "pkg_setup_fix",
             "name": "\u2002\u2699\ufe0f\u2002Setup\u2002\ud83d\udc1e\u2002Bug Report",
             "post_process": {
@@ -2014,7 +2013,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -2026,7 +2025,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-compatible improvement</b> or <b>new functionality</b> in My-New-Project's API, i.e. a non-breaking change (that is not a bug fix) in My-New-Project's Python application programming interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-compatible improvement</b> or <b>new functionality</b> in VoteM8's API, i.e. a non-breaking change (that is not a bug fix) in VoteM8's Python application programming interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -2053,11 +2052,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: pkg_api_feat -->",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: pkg_api_feat -->",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -2093,7 +2092,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -2113,7 +2112,7 @@
                      "label": "API Entry Point",
                      "multiple": false,
                      "options": [
-                        "my_new_project"
+                        "votem8"
                      ]
                   },
                   "id": "entrypoint",
@@ -2124,7 +2123,7 @@
                },
                {
                   "attributes": {
-                     "description": "Please provide the fully qualified name (minus the entry point) of the relevant API endpoint. For example, for a method at `my_new_project.module_name.ClassName.method_name` in the entry point `my_new_project`, you should write `module_name.ClassName.method_name`.",
+                     "description": "Please provide the fully qualified name (minus the entry point) of the relevant API endpoint. For example, for a method at `votem8.module_name.ClassName.method_name` in the entry point `votem8`, you should write `module_name.ClassName.method_name`.",
                      "label": "Fully Qualified Name",
                      "placeholder": "module_name.ClassName.method_name"
                   },
@@ -2157,7 +2156,7 @@
                   }
                }
             ],
-            "description": "Request backward-compatible improvements and new functionalities in My-New-Project's API.",
+            "description": "Request backward-compatible improvements and new functionalities in VoteM8's API.",
             "id": "pkg_api_feat",
             "name": "\u2002\ud83d\udda5\u2002API\u2002\u2728\u2002Feature Request",
             "post_process": {
@@ -2173,7 +2172,7 @@
             "pre_process": {
                "if_any": [
                   [
-                     "my_new_project"
+                     "votem8"
                   ]
                ]
             },
@@ -2184,7 +2183,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -2196,7 +2195,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-compatible improvement</b> or <b>new functionality</b> in My-New-Project's CLI, i.e. a non-breaking change (that is not a bug fix) in My-New-Project's command-line interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-compatible improvement</b> or <b>new functionality</b> in VoteM8's CLI, i.e. a non-breaking change (that is not a bug fix) in VoteM8's command-line interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -2223,11 +2222,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: pkg_cli_feat -->",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: pkg_cli_feat -->",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -2263,7 +2262,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -2283,7 +2282,7 @@
                      "label": "CLI Entry Point",
                      "multiple": false,
                      "options": [
-                        "My-New-Project"
+                        "VoteM8"
                      ]
                   },
                   "id": "entrypoint",
@@ -2315,7 +2314,7 @@
                   }
                }
             ],
-            "description": "Request backward-compatible improvements and new functionalities in My-New-Project's CLI.",
+            "description": "Request backward-compatible improvements and new functionalities in VoteM8's CLI.",
             "id": "pkg_cli_feat",
             "name": "\u2002\u2328\ufe0f\u2002CLI\u2002\u2728\u2002Feature Request",
             "post_process": {
@@ -2331,7 +2330,7 @@
             "pre_process": {
                "if_any": [
                   [
-                     "My-New-Project"
+                     "VoteM8"
                   ]
                ]
             },
@@ -2342,7 +2341,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -2354,7 +2353,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-compatible improvement</b> or <b>new functionality</b> in My-New-Project's GUI, i.e. a non-breaking change (that is not a bug fix) in My-New-Project's graphical user interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-compatible improvement</b> or <b>new functionality</b> in VoteM8's GUI, i.e. a non-breaking change (that is not a bug fix) in VoteM8's graphical user interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -2381,11 +2380,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -2421,7 +2420,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -2471,7 +2470,7 @@
                   }
                }
             ],
-            "description": "Request backward-compatible improvements and new functionalities in My-New-Project's GUI.",
+            "description": "Request backward-compatible improvements and new functionalities in VoteM8's GUI.",
             "id": "pkg_gui_feat",
             "name": "\u2002\ud83d\uddb1\u2002GUI\u2002\u2728\u2002Feature Request",
             "post_process": {
@@ -2496,7 +2495,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -2508,7 +2507,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-incompatible change</b> in My-New-Project's API, i.e. a breaking change in behaviour or functionalities of My-New-Project's Python application programming interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-incompatible change</b> in VoteM8's API, i.e. a breaking change in behaviour or functionalities of VoteM8's Python application programming interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -2535,11 +2534,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: pkg_api_change -->",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: pkg_api_change -->",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -2575,7 +2574,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -2595,7 +2594,7 @@
                      "label": "API Entry Point",
                      "multiple": false,
                      "options": [
-                        "my_new_project"
+                        "votem8"
                      ]
                   },
                   "id": "entrypoint",
@@ -2606,7 +2605,7 @@
                },
                {
                   "attributes": {
-                     "description": "Please provide the fully qualified name (minus the entry point) of the relevant API endpoint. For example, for a method at `my_new_project.module_name.ClassName.method_name` in the entry point `my_new_project`, you should write `module_name.ClassName.method_name`.",
+                     "description": "Please provide the fully qualified name (minus the entry point) of the relevant API endpoint. For example, for a method at `votem8.module_name.ClassName.method_name` in the entry point `votem8`, you should write `module_name.ClassName.method_name`.",
                      "label": "Fully Qualified Name",
                      "placeholder": "module_name.ClassName.method_name"
                   },
@@ -2639,7 +2638,7 @@
                   }
                }
             ],
-            "description": "Request backward-incompatible changes to My-New-Project's API.",
+            "description": "Request backward-incompatible changes to VoteM8's API.",
             "id": "pkg_api_change",
             "name": "\u2002\ud83d\udda5\u2002API\u2002\ud83d\udca5\u2002Change Request",
             "post_process": {
@@ -2655,7 +2654,7 @@
             "pre_process": {
                "if_any": [
                   [
-                     "my_new_project"
+                     "votem8"
                   ]
                ]
             },
@@ -2666,7 +2665,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -2678,7 +2677,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-incompatible change</b> in My-New-Project's CLI, i.e. a breaking change in behaviour or functionalities of My-New-Project's command-line interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-incompatible change</b> in VoteM8's CLI, i.e. a breaking change in behaviour or functionalities of VoteM8's command-line interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -2705,11 +2704,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: pkg_cli_change -->",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: pkg_cli_change -->",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -2745,7 +2744,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -2765,7 +2764,7 @@
                      "label": "CLI Entry Point",
                      "multiple": false,
                      "options": [
-                        "My-New-Project"
+                        "VoteM8"
                      ]
                   },
                   "id": "entrypoint",
@@ -2797,7 +2796,7 @@
                   }
                }
             ],
-            "description": "Request backward-incompatible changes to My-New-Project's CLI.",
+            "description": "Request backward-incompatible changes to VoteM8's CLI.",
             "id": "pkg_cli_change",
             "name": "\u2002\u2328\ufe0f\u2002CLI\u2002\ud83d\udca5\u2002Change Request",
             "post_process": {
@@ -2813,7 +2812,7 @@
             "pre_process": {
                "if_any": [
                   [
-                     "My-New-Project"
+                     "VoteM8"
                   ]
                ]
             },
@@ -2824,7 +2823,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -2836,7 +2835,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-incompatible change</b> in My-New-Project's GUI, i.e. a breaking change in behaviour or functionalities of My-New-Project's graphical user interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-incompatible change</b> in VoteM8's GUI, i.e. a breaking change in behaviour or functionalities of VoteM8's graphical user interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -2863,11 +2862,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -2903,7 +2902,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -2953,7 +2952,7 @@
                   }
                }
             ],
-            "description": "Request backward-incompatible changes to My-New-Project's GUI.",
+            "description": "Request backward-incompatible changes to VoteM8's GUI.",
             "id": "pkg_gui_change",
             "name": "\u2002\ud83d\uddb1\u2002GUI\u2002\ud83d\udca5\u2002Change Request",
             "post_process": {
@@ -2978,7 +2977,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -2990,7 +2989,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for reporting a <b>non-security-related bug in My New Project's website and documentation materials</b>, e.g. misspellings and other mechanical errors, broken links and images, layout issues, etc.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for reporting a <b>non-security-related bug in VoteM8's website and documentation materials</b>, e.g. misspellings and other mechanical errors, broken links and images, layout issues, etc.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -3017,11 +3016,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: doc_fix -->",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: doc_fix -->",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -3057,7 +3056,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -3106,7 +3105,7 @@
                   }
                }
             ],
-            "description": "Report problems and errors  in My New Project's website and documentation materials.",
+            "description": "Report problems and errors  in VoteM8's website and documentation materials.",
             "id": "doc_fix",
             "name": "\u2002\ud83d\udcda\u2002Docs\u2002\ud83d\udc1e\u2002Bug Report",
             "post_process": {
@@ -3126,7 +3125,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -3138,7 +3137,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-compatible improvement</b> or <b>new content</b> in My New Project's website and documentation materials</b>, i.e. a change that is not a bug fix and does not break existing references or functionalities.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-compatible improvement</b> or <b>new content</b> in VoteM8's website and documentation materials</b>, i.e. a change that is not a bug fix and does not break existing references or functionalities.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -3165,11 +3164,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: doc_feat -->",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: doc_feat -->",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -3205,7 +3204,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -3253,7 +3252,7 @@
                   }
                }
             ],
-            "description": "Request backward-compatible improvements and new content in My New Project's website and documentation materials.",
+            "description": "Request backward-compatible improvements and new content in VoteM8's website and documentation materials.",
             "id": "doc_feat",
             "name": "\u2002\ud83d\udcda\u2002Docs\u2002\u2728\u2002Feature Request",
             "post_process": {
@@ -3273,7 +3272,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -3285,7 +3284,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-incompatible change</b> in My New Project's website and documentation materials</b>, i.e. a change that breaks existing references or functionalities.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-incompatible change</b> in VoteM8's website and documentation materials</b>, i.e. a change that breaks existing references or functionalities.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -3312,11 +3311,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: doc_change -->",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: doc_change -->",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -3352,7 +3351,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -3400,7 +3399,7 @@
                   }
                }
             ],
-            "description": "Request backward-incompatible changes to My New Project's website and documentation materials.",
+            "description": "Request backward-incompatible changes to VoteM8's website and documentation materials.",
             "id": "doc_change",
             "name": "\u2002\ud83d\udcda\u2002Docs\u2002\ud83d\udca5\u2002Change Request",
             "post_process": {
@@ -3420,7 +3419,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -3432,7 +3431,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for reporting a <b>non-security-related bug in My-New-Project-TestSuite's API</b>, i.e. an unexpected behavior or result in My-New-Project-TestSuite's Python application programming interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for reporting a <b>non-security-related bug in VoteM8-TestSuite's API</b>, i.e. an unexpected behavior or result in VoteM8-TestSuite's Python application programming interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -3459,11 +3458,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: test_api_fix -->",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: test_api_fix -->",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -3535,7 +3534,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select the package manager used to download and install My New Project.\n",
+                     "description": "Please select the package manager used to download and install VoteM8.\n",
                      "label": "Package Manager",
                      "multiple": false,
                      "options": [
@@ -3569,7 +3568,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -3589,7 +3588,7 @@
                      "label": "API Entry Point",
                      "multiple": false,
                      "options": [
-                        "my_new_project_testsuite"
+                        "votem8_testsuite"
                      ]
                   },
                   "id": "entrypoint",
@@ -3600,7 +3599,7 @@
                },
                {
                   "attributes": {
-                     "description": "Please provide the fully qualified name (minus the entry point) of the relevant API endpoint. For example, for a method at `my_new_project_testsuite.module_name.ClassName.method_name` in the entry point `my_new_project_testsuite`, you should write `module_name.ClassName.method_name`.",
+                     "description": "Please provide the fully qualified name (minus the entry point) of the relevant API endpoint. For example, for a method at `votem8_testsuite.module_name.ClassName.method_name` in the entry point `votem8_testsuite`, you should write `module_name.ClassName.method_name`.",
                      "label": "Fully Qualified Name",
                      "placeholder": "module_name.ClassName.method_name"
                   },
@@ -3626,7 +3625,7 @@
                      "description": "Please provide a [test case](https://docs.pytest.org/en/stable/getting-started.html) that demonstrates the bug:\n- At the top of the code block below, add the minimum number of imports required to reproduce the bug.\n- Replace the ellipsis (`...`) in the `test` function with a [Minimal Reproducible Example](https://stackoverflow.com/help/minimal-reproducible-example) (MRE). Use [`assert` statements](https://docs.pytest.org/en/stable/how-to/assert.html) to specify the expected results.",
                      "label": "Test Case",
                      "render": "python",
-                     "value": "import my_new_project_testsuite\n\n\ndef test():\n    ...\n"
+                     "value": "import votem8_testsuite\n\n\ndef test():\n    ...\n"
                   },
                   "id": "test_case",
                   "type": "textarea",
@@ -3635,7 +3634,7 @@
                   }
                }
             ],
-            "description": "Report problems and errors in My-New-Project-TestSuite's API.",
+            "description": "Report problems and errors in VoteM8-TestSuite's API.",
             "id": "test_api_fix",
             "name": "\u2002\ud83e\uddea\u2002Test\u2002\ud83d\udda5\u2002API\u2002\ud83d\udc1e\u2002Bug Report",
             "post_process": {
@@ -3651,7 +3650,7 @@
             "pre_process": {
                "if_any": [
                   [
-                     "my_new_project_testsuite"
+                     "votem8_testsuite"
                   ]
                ]
             },
@@ -3662,7 +3661,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -3674,7 +3673,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for reporting a <b>non-security-related bug in My-New-Project-TestSuite's CLI</b>, i.e. an unexpected behavior or result in My-New-Project-TestSuite's command-line interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for reporting a <b>non-security-related bug in VoteM8-TestSuite's CLI</b>, i.e. an unexpected behavior or result in VoteM8-TestSuite's command-line interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -3701,11 +3700,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: test_cli_fix -->",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: test_cli_fix -->",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -3777,7 +3776,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select the package manager used to download and install My New Project.\n",
+                     "description": "Please select the package manager used to download and install VoteM8.\n",
                      "label": "Package Manager",
                      "multiple": false,
                      "options": [
@@ -3811,7 +3810,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -3831,7 +3830,7 @@
                      "label": "CLI Entry Point",
                      "multiple": false,
                      "options": [
-                        "My-New-Project-TestSuite"
+                        "VoteM8-TestSuite"
                      ]
                   },
                   "id": "entrypoint",
@@ -3865,7 +3864,7 @@
                   }
                }
             ],
-            "description": "Report problems and errors in My-New-Project-TestSuite's CLI.",
+            "description": "Report problems and errors in VoteM8-TestSuite's CLI.",
             "id": "test_cli_fix",
             "name": "\u2002\ud83e\uddea\u2002Test\u2002\u2328\ufe0f\u2002CLI\u2002\ud83d\udc1e\u2002Bug Report",
             "post_process": {
@@ -3881,7 +3880,7 @@
             "pre_process": {
                "if_any": [
                   [
-                     "My-New-Project-TestSuite"
+                     "VoteM8-TestSuite"
                   ]
                ]
             },
@@ -3892,7 +3891,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -3904,7 +3903,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for reporting a <b>non-security-related bug in My-New-Project-TestSuite's GUI</b>, i.e. an unexpected behavior or result in My-New-Project-TestSuite's graphical user interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for reporting a <b>non-security-related bug in VoteM8-TestSuite's GUI</b>, i.e. an unexpected behavior or result in VoteM8-TestSuite's graphical user interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -3931,11 +3930,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -4007,7 +4006,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select the package manager used to download and install My New Project.\n",
+                     "description": "Please select the package manager used to download and install VoteM8.\n",
                      "label": "Package Manager",
                      "multiple": false,
                      "options": [
@@ -4041,7 +4040,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -4104,7 +4103,7 @@
                   }
                }
             ],
-            "description": "Report problems and errors in My-New-Project-TestSuite's GUI.",
+            "description": "Report problems and errors in VoteM8-TestSuite's GUI.",
             "id": "test_gui_fix",
             "name": "\u2002\ud83e\uddea\u2002Test\u2002\ud83d\uddb1\u2002GUI\u2002\ud83d\udc1e\u2002Bug Report",
             "post_process": {
@@ -4129,7 +4128,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -4141,7 +4140,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for reporting a <b>non-security-related bug in My New Project's setup process</b>, i.e. an unexpected behavior that occurs during the download, installation, or initialization of the application.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for reporting a <b>non-security-related bug in VoteM8's setup process</b>, i.e. an unexpected behavior that occurs during the download, installation, or initialization of the application.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -4168,11 +4167,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: test_setup_fix -->",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: test_setup_fix -->",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -4244,7 +4243,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select the package manager used to download and install My New Project.\n",
+                     "description": "Please select the package manager used to download and install VoteM8.\n",
                      "label": "Package Manager",
                      "multiple": false,
                      "options": [
@@ -4278,7 +4277,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -4327,7 +4326,7 @@
                   }
                }
             ],
-            "description": "Report problems in downloading, installation, or initialization of My-New-Project.",
+            "description": "Report problems in downloading, installation, or initialization of VoteM8.",
             "id": "test_setup_fix",
             "name": "\u2002\ud83e\uddea\u2002Test\u2002\u2699\ufe0f\u2002Setup\u2002\ud83d\udc1e\u2002Bug Report",
             "post_process": {
@@ -4347,7 +4346,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -4359,7 +4358,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-compatible improvement</b> or <b>new functionality</b> in My-New-Project-TestSuite's API, i.e. a non-breaking change (that is not a bug fix) in My-New-Project-TestSuite's Python application programming interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-compatible improvement</b> or <b>new functionality</b> in VoteM8-TestSuite's API, i.e. a non-breaking change (that is not a bug fix) in VoteM8-TestSuite's Python application programming interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -4386,11 +4385,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: test_api_feat -->",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: test_api_feat -->",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -4426,7 +4425,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -4446,7 +4445,7 @@
                      "label": "API Entry Point",
                      "multiple": false,
                      "options": [
-                        "my_new_project_testsuite"
+                        "votem8_testsuite"
                      ]
                   },
                   "id": "entrypoint",
@@ -4457,7 +4456,7 @@
                },
                {
                   "attributes": {
-                     "description": "Please provide the fully qualified name (minus the entry point) of the relevant API endpoint. For example, for a method at `my_new_project_testsuite.module_name.ClassName.method_name` in the entry point `my_new_project_testsuite`, you should write `module_name.ClassName.method_name`.",
+                     "description": "Please provide the fully qualified name (minus the entry point) of the relevant API endpoint. For example, for a method at `votem8_testsuite.module_name.ClassName.method_name` in the entry point `votem8_testsuite`, you should write `module_name.ClassName.method_name`.",
                      "label": "Fully Qualified Name",
                      "placeholder": "module_name.ClassName.method_name"
                   },
@@ -4490,7 +4489,7 @@
                   }
                }
             ],
-            "description": "Request backward-compatible improvements and new functionalities in My-New-Project-TestSuite's API.",
+            "description": "Request backward-compatible improvements and new functionalities in VoteM8-TestSuite's API.",
             "id": "test_api_feat",
             "name": "\u2002\ud83e\uddea\u2002Test\u2002\ud83d\udda5\u2002API\u2002\u2728\u2002Feature Request",
             "post_process": {
@@ -4506,7 +4505,7 @@
             "pre_process": {
                "if_any": [
                   [
-                     "my_new_project_testsuite"
+                     "votem8_testsuite"
                   ]
                ]
             },
@@ -4517,7 +4516,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -4529,7 +4528,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-compatible improvement</b> or <b>new functionality</b> in My-New-Project-TestSuite's CLI, i.e. a non-breaking change (that is not a bug fix) in My-New-Project-TestSuite's command-line interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-compatible improvement</b> or <b>new functionality</b> in VoteM8-TestSuite's CLI, i.e. a non-breaking change (that is not a bug fix) in VoteM8-TestSuite's command-line interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -4556,11 +4555,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: test_cli_feat -->",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: test_cli_feat -->",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -4596,7 +4595,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -4616,7 +4615,7 @@
                      "label": "CLI Entry Point",
                      "multiple": false,
                      "options": [
-                        "My-New-Project-TestSuite"
+                        "VoteM8-TestSuite"
                      ]
                   },
                   "id": "entrypoint",
@@ -4648,7 +4647,7 @@
                   }
                }
             ],
-            "description": "Request backward-compatible improvements and new functionalities in My-New-Project-TestSuite's CLI.",
+            "description": "Request backward-compatible improvements and new functionalities in VoteM8-TestSuite's CLI.",
             "id": "test_cli_feat",
             "name": "\u2002\ud83e\uddea\u2002Test\u2002\u2328\ufe0f\u2002CLI\u2002\u2728\u2002Feature Request",
             "post_process": {
@@ -4664,7 +4663,7 @@
             "pre_process": {
                "if_any": [
                   [
-                     "My-New-Project-TestSuite"
+                     "VoteM8-TestSuite"
                   ]
                ]
             },
@@ -4675,7 +4674,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -4687,7 +4686,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-compatible improvement</b> or <b>new functionality</b> in My-New-Project-TestSuite's GUI, i.e. a non-breaking change (that is not a bug fix) in My-New-Project-TestSuite's graphical user interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-compatible improvement</b> or <b>new functionality</b> in VoteM8-TestSuite's GUI, i.e. a non-breaking change (that is not a bug fix) in VoteM8-TestSuite's graphical user interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -4714,11 +4713,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -4754,7 +4753,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -4804,7 +4803,7 @@
                   }
                }
             ],
-            "description": "Request backward-compatible improvements and new functionalities in My-New-Project-TestSuite's GUI.",
+            "description": "Request backward-compatible improvements and new functionalities in VoteM8-TestSuite's GUI.",
             "id": "test_gui_feat",
             "name": "\u2002\ud83e\uddea\u2002Test\u2002\ud83d\uddb1\u2002GUI\u2002\u2728\u2002Feature Request",
             "post_process": {
@@ -4829,7 +4828,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -4841,7 +4840,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-incompatible change</b> in My-New-Project-TestSuite's API, i.e. a breaking change in behaviour or functionalities of My-New-Project-TestSuite's Python application programming interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-incompatible change</b> in VoteM8-TestSuite's API, i.e. a breaking change in behaviour or functionalities of VoteM8-TestSuite's Python application programming interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -4868,11 +4867,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: test_api_change -->",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: test_api_change -->",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -4908,7 +4907,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -4928,7 +4927,7 @@
                      "label": "API Entry Point",
                      "multiple": false,
                      "options": [
-                        "my_new_project_testsuite"
+                        "votem8_testsuite"
                      ]
                   },
                   "id": "entrypoint",
@@ -4939,7 +4938,7 @@
                },
                {
                   "attributes": {
-                     "description": "Please provide the fully qualified name (minus the entry point) of the relevant API endpoint. For example, for a method at `my_new_project_testsuite.module_name.ClassName.method_name` in the entry point `my_new_project_testsuite`, you should write `module_name.ClassName.method_name`.",
+                     "description": "Please provide the fully qualified name (minus the entry point) of the relevant API endpoint. For example, for a method at `votem8_testsuite.module_name.ClassName.method_name` in the entry point `votem8_testsuite`, you should write `module_name.ClassName.method_name`.",
                      "label": "Fully Qualified Name",
                      "placeholder": "module_name.ClassName.method_name"
                   },
@@ -4972,7 +4971,7 @@
                   }
                }
             ],
-            "description": "Request backward-incompatible changes to My-New-Project-TestSuite's API.",
+            "description": "Request backward-incompatible changes to VoteM8-TestSuite's API.",
             "id": "test_api_change",
             "name": "\u2002\ud83e\uddea\u2002Test\u2002\ud83d\udda5\u2002API\u2002\ud83d\udca5\u2002Change Request",
             "post_process": {
@@ -4988,7 +4987,7 @@
             "pre_process": {
                "if_any": [
                   [
-                     "my_new_project_testsuite"
+                     "votem8_testsuite"
                   ]
                ]
             },
@@ -4999,7 +4998,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -5011,7 +5010,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-incompatible change</b> in My-New-Project-TestSuite's CLI, i.e. a breaking change in behaviour or functionalities of My-New-Project-TestSuite's command-line interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-incompatible change</b> in VoteM8-TestSuite's CLI, i.e. a breaking change in behaviour or functionalities of VoteM8-TestSuite's command-line interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -5038,11 +5037,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: test_cli_change -->",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: test_cli_change -->",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -5078,7 +5077,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -5098,7 +5097,7 @@
                      "label": "CLI Entry Point",
                      "multiple": false,
                      "options": [
-                        "My-New-Project-TestSuite"
+                        "VoteM8-TestSuite"
                      ]
                   },
                   "id": "entrypoint",
@@ -5130,7 +5129,7 @@
                   }
                }
             ],
-            "description": "Request backward-incompatible changes to My-New-Project-TestSuite's CLI.",
+            "description": "Request backward-incompatible changes to VoteM8-TestSuite's CLI.",
             "id": "test_cli_change",
             "name": "\u2002\ud83e\uddea\u2002Test\u2002\u2328\ufe0f\u2002CLI\u2002\ud83d\udca5\u2002Change Request",
             "post_process": {
@@ -5146,7 +5145,7 @@
             "pre_process": {
                "if_any": [
                   [
-                     "My-New-Project-TestSuite"
+                     "VoteM8-TestSuite"
                   ]
                ]
             },
@@ -5157,7 +5156,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -5169,7 +5168,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-incompatible change</b> in My-New-Project-TestSuite's GUI, i.e. a breaking change in behaviour or functionalities of My-New-Project-TestSuite's graphical user interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>backward-incompatible change</b> in VoteM8-TestSuite's GUI, i.e. a breaking change in behaviour or functionalities of VoteM8-TestSuite's graphical user interface.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -5196,11 +5195,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -5236,7 +5235,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -5286,7 +5285,7 @@
                   }
                }
             ],
-            "description": "Request backward-incompatible changes to My-New-Project-TestSuite's GUI.",
+            "description": "Request backward-incompatible changes to VoteM8-TestSuite's GUI.",
             "id": "test_gui_change",
             "name": "\u2002\ud83e\uddea\u2002Test\u2002\ud83d\uddb1\u2002GUI\u2002\ud83d\udca5\u2002Change Request",
             "post_process": {
@@ -5311,7 +5310,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -5323,7 +5322,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>code formatting and refactoring</b> in My New Project's source files, i.e. a change that improves the code quality, readability, and maintainability, without affecting the code's runtime behavior.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>code formatting and refactoring</b> in VoteM8's source files, i.e. a change that improves the code quality, readability, and maintainability, without affecting the code's runtime behavior.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -5344,11 +5343,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: refactor -->",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: refactor -->",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -5384,7 +5383,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -5420,7 +5419,7 @@
                   }
                }
             ],
-            "description": "Request code formatting and refactoring in My New Project's source files.",
+            "description": "Request code formatting and refactoring in VoteM8's source files.",
             "id": "refactor",
             "name": "\u2002\ud83e\uddf9\ufe0f\u2002Refactoring Request",
             "post_process": {
@@ -5440,7 +5439,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -5452,7 +5451,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>reconfiguration</b> in My New Project's metadata and settings, such as project information and other options that do not fall under other issue categories.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>reconfiguration</b> in VoteM8's metadata and settings, such as project information and other options that do not fall under other issue categories.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -5473,11 +5472,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: config -->",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: config -->",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -5513,7 +5512,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -5573,7 +5572,7 @@
                   }
                }
             ],
-            "description": "Request a change in My New Project's metadata and settings.",
+            "description": "Request a change in VoteM8's metadata and settings.",
             "id": "config",
             "name": "\u2002\ud83d\udee0\ufe0f\u2002Configuration Request",
             "post_process": {
@@ -5593,7 +5592,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -5605,7 +5604,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>change in My New Project's automated workflows and development environment</b>, such as CI/CD pipelines, testing, and deployment configurations.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>change in VoteM8's automated workflows and development environment</b>, such as CI/CD pipelines, testing, and deployment configurations.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -5626,11 +5625,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: devops -->",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: devops -->",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -5666,7 +5665,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -5726,7 +5725,7 @@
                   }
                }
             ],
-            "description": "Request a change in My New Project's automated workflows and development environment.",
+            "description": "Request a change in VoteM8's automated workflows and development environment.",
             "id": "devops",
             "name": "\u2002\ud83e\udd16\ufe0f\u2002DevOps Request",
             "post_process": {
@@ -5746,7 +5745,7 @@
             "body": [
                {
                   "attributes": {
-                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
+                     "value": "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n  we greatly appreciate your contribution!\n  Before submitting a ticket,\n  please take a moment to review and accept our terms and conditions.\n</p>"
                   },
                   "type": "markdown"
                },
@@ -5758,7 +5757,7 @@
                },
                {
                   "attributes": {
-                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>maintenance job</b> in My New Project, such as file cleanup and other tasks that do not fall under other issue categories.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
+                     "value": "### \u26d4\u2002Choosing the Right Form\n\n<p align=\"justify\">\n  Please note that this form is specifically for requesting a <b>maintenance job</b> in VoteM8, such as file cleanup and other tasks that do not fall under other issue categories.,\n  For other types of issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue template chooser</a>.\n  If you are unsure about which form to choose or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\">discussion forum</a>.\n</p>\n"
                   },
                   "type": "markdown"
                },
@@ -5779,11 +5778,11 @@
                      "label": "To submit an issue, please agree to the following terms and conditions:",
                      "options": [
                         {
-                           "label": "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: maintenance -->",
+                           "label": "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!-- ISSUE-ID: maintenance -->",
                            "required": true
                         },
                         {
-                           "label": "I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
+                           "label": "I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).",
                            "required": true
                         }
                      ]
@@ -5819,7 +5818,7 @@
                {
                   "attributes": {
                      "default": 0,
-                     "description": "Please select all relevant My New Project versions.\n",
+                     "description": "Please select all relevant VoteM8 versions.\n",
                      "label": "Version",
                      "multiple": true,
                      "options": [
@@ -5855,7 +5854,7 @@
                   }
                }
             ],
-            "description": "Request a maintenance job in My New Project.",
+            "description": "Request a maintenance job in VoteM8.",
             "id": "maintenance",
             "name": "\u2002\ud83e\uddf9\ufe0f\u2002Maintenance Request",
             "post_process": {
@@ -5874,12 +5873,11 @@
       ]
    },
    "keywords": [
-      "First Keyword",
-      "Second Keyword",
-      "Third Keyword",
-      "Fourth Keyword",
-      "Fifth Keyword",
-      "Sixth Keyword"
+      "consensus",
+      "scoring",
+      "molecular docking",
+      "protein-ligand scoring",
+      "virtual screening"
    ],
    "label": {
       "all": [
@@ -5930,7 +5928,7 @@
          },
          {
             "color": "#0366d6",
-            "description": "Related to My-New-Project's Python API.",
+            "description": "Related to VoteM8's Python API.",
             "group_name": "subtype",
             "id": "api",
             "name": "subtype: API",
@@ -5939,7 +5937,7 @@
          },
          {
             "color": "#0366d6",
-            "description": "Related to My-New-Project's command-line interface.",
+            "description": "Related to VoteM8's command-line interface.",
             "group_name": "subtype",
             "id": "cli",
             "name": "subtype: CLI",
@@ -5948,7 +5946,7 @@
          },
          {
             "color": "#0366d6",
-            "description": "Related to My-New-Project's graphical user interface.",
+            "description": "Related to VoteM8's graphical user interface.",
             "group_name": "subtype",
             "id": "gui",
             "name": "subtype: GUI",
@@ -5957,7 +5955,7 @@
          },
          {
             "color": "#0366d6",
-            "description": "Related to My-New-Project's installation.",
+            "description": "Related to VoteM8's installation.",
             "group_name": "subtype",
             "id": "setup",
             "name": "subtype: Setup",
@@ -5993,7 +5991,7 @@
          },
          {
             "color": "#0366d6",
-            "description": "Related to fixes in My-New-Project-TestSuite's Python API.",
+            "description": "Related to fixes in VoteM8-TestSuite's Python API.",
             "group_name": "subtype",
             "id": "test_api_fix",
             "name": "subtype: Test API Fix",
@@ -6002,7 +6000,7 @@
          },
          {
             "color": "#0366d6",
-            "description": "Related to fixes in My-New-Project-TestSuite's command-line interface.",
+            "description": "Related to fixes in VoteM8-TestSuite's command-line interface.",
             "group_name": "subtype",
             "id": "test_cli_fix",
             "name": "subtype: Test CLI Fix",
@@ -6011,7 +6009,7 @@
          },
          {
             "color": "#0366d6",
-            "description": "Related to fixes in My-New-Project-TestSuite's graphical user interface.",
+            "description": "Related to fixes in VoteM8-TestSuite's graphical user interface.",
             "group_name": "subtype",
             "id": "test_gui_fix",
             "name": "subtype: Test GUI Fix",
@@ -6020,7 +6018,7 @@
          },
          {
             "color": "#0366d6",
-            "description": "Related to fixes in My-New-Project-TestSuite's installation.",
+            "description": "Related to fixes in VoteM8-TestSuite's installation.",
             "group_name": "subtype",
             "id": "test_setup_fix",
             "name": "subtype: Test Setup Fix",
@@ -6029,7 +6027,7 @@
          },
          {
             "color": "#0366d6",
-            "description": "Related to features in My-New-Project-TestSuite's Python API.",
+            "description": "Related to features in VoteM8-TestSuite's Python API.",
             "group_name": "subtype",
             "id": "test_api_feat",
             "name": "subtype: Test API Feat",
@@ -6038,7 +6036,7 @@
          },
          {
             "color": "#0366d6",
-            "description": "Related to features in My-New-Project-TestSuite's command-line interface.",
+            "description": "Related to features in VoteM8-TestSuite's command-line interface.",
             "group_name": "subtype",
             "id": "test_cli_feat",
             "name": "subtype: Test CLI Feat",
@@ -6047,7 +6045,7 @@
          },
          {
             "color": "#0366d6",
-            "description": "Related to features in My-New-Project-TestSuite's graphical user interface.",
+            "description": "Related to features in VoteM8-TestSuite's graphical user interface.",
             "group_name": "subtype",
             "id": "test_gui_feat",
             "name": "subtype: Test GUI Feat",
@@ -6056,7 +6054,7 @@
          },
          {
             "color": "#0366d6",
-            "description": "Related to changes in My-New-Project-TestSuite's Python API.",
+            "description": "Related to changes in VoteM8-TestSuite's Python API.",
             "group_name": "subtype",
             "id": "test_api_change",
             "name": "subtype: Test API Change",
@@ -6065,7 +6063,7 @@
          },
          {
             "color": "#0366d6",
-            "description": "Related to changes in My-New-Project-TestSuite's command-line interface.",
+            "description": "Related to changes in VoteM8-TestSuite's command-line interface.",
             "group_name": "subtype",
             "id": "test_cli_change",
             "name": "subtype: Test CLI Change",
@@ -6074,7 +6072,7 @@
          },
          {
             "color": "#0366d6",
-            "description": "Related to changes in My-New-Project-TestSuite's graphical user interface.",
+            "description": "Related to changes in VoteM8-TestSuite's graphical user interface.",
             "group_name": "subtype",
             "id": "test_gui_change",
             "name": "subtype: Test GUI Change",
@@ -6092,7 +6090,7 @@
          },
          {
             "color": "#0366d6",
-            "description": "Related to My New Project metadata and settings.",
+            "description": "Related to VoteM8 metadata and settings.",
             "group_name": "subtype",
             "id": "config",
             "name": "subtype: Config",
@@ -6369,15 +6367,15 @@
          "color": "#0366d6",
          "label": {
             "api": {
-               "description": "Related to My-New-Project's Python API.",
+               "description": "Related to VoteM8's Python API.",
                "suffix": "API"
             },
             "cli": {
-               "description": "Related to My-New-Project's command-line interface.",
+               "description": "Related to VoteM8's command-line interface.",
                "suffix": "CLI"
             },
             "config": {
-               "description": "Related to My New Project metadata and settings.",
+               "description": "Related to VoteM8 metadata and settings.",
                "suffix": "Config"
             },
             "devops": {
@@ -6397,7 +6395,7 @@
                "suffix": "Doc Fix"
             },
             "gui": {
-               "description": "Related to My-New-Project's graphical user interface.",
+               "description": "Related to VoteM8's graphical user interface.",
                "suffix": "GUI"
             },
             "maintenance": {
@@ -6409,47 +6407,47 @@
                "suffix": "Refactor"
             },
             "setup": {
-               "description": "Related to My-New-Project's installation.",
+               "description": "Related to VoteM8's installation.",
                "suffix": "Setup"
             },
             "test_api_change": {
-               "description": "Related to changes in My-New-Project-TestSuite's Python API.",
+               "description": "Related to changes in VoteM8-TestSuite's Python API.",
                "suffix": "Test API Change"
             },
             "test_api_feat": {
-               "description": "Related to features in My-New-Project-TestSuite's Python API.",
+               "description": "Related to features in VoteM8-TestSuite's Python API.",
                "suffix": "Test API Feat"
             },
             "test_api_fix": {
-               "description": "Related to fixes in My-New-Project-TestSuite's Python API.",
+               "description": "Related to fixes in VoteM8-TestSuite's Python API.",
                "suffix": "Test API Fix"
             },
             "test_cli_change": {
-               "description": "Related to changes in My-New-Project-TestSuite's command-line interface.",
+               "description": "Related to changes in VoteM8-TestSuite's command-line interface.",
                "suffix": "Test CLI Change"
             },
             "test_cli_feat": {
-               "description": "Related to features in My-New-Project-TestSuite's command-line interface.",
+               "description": "Related to features in VoteM8-TestSuite's command-line interface.",
                "suffix": "Test CLI Feat"
             },
             "test_cli_fix": {
-               "description": "Related to fixes in My-New-Project-TestSuite's command-line interface.",
+               "description": "Related to fixes in VoteM8-TestSuite's command-line interface.",
                "suffix": "Test CLI Fix"
             },
             "test_gui_change": {
-               "description": "Related to changes in My-New-Project-TestSuite's graphical user interface.",
+               "description": "Related to changes in VoteM8-TestSuite's graphical user interface.",
                "suffix": "Test GUI Change"
             },
             "test_gui_feat": {
-               "description": "Related to features in My-New-Project-TestSuite's graphical user interface.",
+               "description": "Related to features in VoteM8-TestSuite's graphical user interface.",
                "suffix": "Test GUI Feat"
             },
             "test_gui_fix": {
-               "description": "Related to fixes in My-New-Project-TestSuite's graphical user interface.",
+               "description": "Related to fixes in VoteM8-TestSuite's graphical user interface.",
                "suffix": "Test GUI Fix"
             },
             "test_setup_fix": {
-               "description": "Related to fixes in My-New-Project-TestSuite's installation.",
+               "description": "Related to fixes in VoteM8-TestSuite's installation.",
                "suffix": "Test Setup Fix"
             }
          },
@@ -6547,13 +6545,13 @@
                   "copyrightHolderAsIs": "DrugM8",
                   "copyrightHolderLiability": "DrugM8",
                   "creator": "DrugM8",
-                  "description": "My New Project",
+                  "description": "VoteM8",
                   "email": "mailto:alacournola+drugbud@gmail.com",
                   "initialDeveloper": "DrugM8",
                   "maintainer": "DrugM8",
                   "organization": "DrugM8",
                   "owner": "DrugM8",
-                  "softwareName": "My New Project",
+                  "softwareName": "VoteM8",
                   "softwareVersion": "0.0.0",
                   "version": "0.0.0"
                },
@@ -6584,13 +6582,13 @@
                   "copyrightHolderAsIs": "DrugM8",
                   "copyrightHolderLiability": "DrugM8",
                   "creator": "DrugM8",
-                  "description": "My New Project",
+                  "description": "VoteM8",
                   "email": "mailto:alacournola+drugbud@gmail.com",
                   "initialDeveloper": "DrugM8",
                   "maintainer": "DrugM8",
                   "organization": "DrugM8",
                   "owner": "DrugM8",
-                  "softwareName": "My New Project",
+                  "softwareName": "VoteM8",
                   "softwareVersion": "0.0.0",
                   "version": "0.0.0"
                },
@@ -6866,7 +6864,7 @@
       "security": "owner",
       "support": "owner"
    },
-   "name": "My New Project",
+   "name": "VoteM8",
    "pkg": {
       "authors": [
          "owner"
@@ -6904,12 +6902,12 @@
                   "distance-dirty": "{base_version}+{distance}.{committer_date:%Y.%m.%d}.{rev}.dirty"
                },
                "onbuild": {
-                  "build-file": "my_new_project/__init__.py",
+                  "build-file": "votem8/__init__.py",
                   "method": "replace-version",
                   "regex": "^__version_details__: dict\\[str, str\\] = (?P<version>.*)",
                   "replacement": "{{\n    \"version\": \"{version}\",\n    \"build_date\": \"{build_date:%Y.%m.%d}\",\n    \"committer_date\": \"{committer_date:%Y.%m.%d}\",\n    \"author_date\": \"{author_date:%Y.%m.%d}\",\n    \"branch\": \"{branch}\",\n    \"distance\": \"{distance}\",\n    \"commit_hash\": \"{revision}\",\n}}\n",
                   "require-match": true,
-                  "source-file": "src/my_new_project/__init__.py"
+                  "source-file": "src/votem8/__init__.py"
                },
                "tag2version": {
                   "rmprefix": "ver/"
@@ -6951,7 +6949,7 @@
          },
          "env": {
             "conda": {
-               "name": "my_new_project",
+               "name": "votem8",
                "path": "pkg/conda_env.yaml"
             },
             "pip": {
@@ -6959,44 +6957,43 @@
             }
          }
       },
-      "description": "A Placeholder Project Title",
+      "description": "VoteM8 - A Python package for consensus scoring",
       "entry": {
          "cli": {
             "main": {
                "description": "Main CLI entry of the package.",
-               "name": "My-New-Project",
-               "ref": "my_new_project:__main__"
+               "name": "VoteM8",
+               "ref": "votem8:__main__"
             }
          },
          "python": {
             "main": {
                "description": "Main Python API entry of the package.",
-               "name": "my_new_project",
-               "ref": "my_new_project:__init__"
+               "name": "votem8",
+               "ref": "votem8:__init__"
             }
          }
       },
       "file": {
          "__init__.py": {
-            "docstring": "My New Project: A Placeholder Project Title.\n\nReplace this text with a short abstract of My New Project, describing its purpose and main features. By default, this text is displayed on the repository's main README file, on the homepage of the project's website, on the project's PyPI and TestPyPI pages, and on the package's main docstring. Like all other entries in the repository's control center, this text can also contain dynamic references to other entries, using the <code>${\u200e{ json-path.to.value }}$</code> syntax. By default, the first occurrence of the name of the project in this text is styled as strong and linked to the project's website.\n\n\u00a9 2024 DrugM8\nSPDX-License-Identifier: MIT\n\n"
+            "docstring": "VoteM8: VoteM8 - A Python package for consensus scoring.\n\nVoteM8 is a Python library for consensus scoring and ranking of multi-criteria data.  It implements multiple scoring methods including ECR, RbR, TOPSIS, VIKOR and others to combine different evaluation metrics into unified rankings.  The library supports customizable weights, handles missing values, and provides both normalization and aggregation options.  It includes a command-line interface and can process both CSV and SDF file formats, making it particularly useful for processing molecular docking scores and other scientific data requiring consensus analysis.\n\n\u00a9 2024 DrugM8\nSPDX-License-Identifier: MIT\n\n"
          }
       },
-      "import_name": "my_new_project",
+      "import_name": "votem8",
       "keywords": [
-         "First Keyword",
-         "Second Keyword",
-         "Third Keyword",
-         "Fourth Keyword",
-         "Fifth Keyword",
-         "Sixth Keyword"
+         "consensus",
+         "scoring",
+         "molecular docking",
+         "protein-ligand scoring",
+         "virtual screening"
       ],
       "license": "MIT",
       "manifest": [
-         "graft src/my_new_project/data",
-         "include src/my_new_project/py.typed",
+         "graft src/votem8/data",
+         "include src/votem8/py.typed",
          "global-exclude *.py[cod] __pycache__ *.so"
       ],
-      "name": "My-New-Project",
+      "name": "VoteM8",
       "os": {
          "linux": {
             "name": "Linux",
@@ -7013,14 +7010,14 @@
       },
       "os_independent": true,
       "path": {
-         "import": "pkg/src/my_new_project",
+         "import": "pkg/src/votem8",
          "root": "pkg",
          "source": "pkg/src",
          "source_rel": "src"
       },
       "pypi": {
          "url": {
-            "home": "https://pypi.org/project/My-New-Project"
+            "home": "https://pypi.org/project/VoteM8"
          }
       },
       "python": {
@@ -7085,12 +7082,12 @@
             "body": [
                {
                   "align": "center",
-                  "alt": "My New Project: A Placeholder Project Title",
+                  "alt": "VoteM8: VoteM8 - A Python package for consensus scoring",
                   "class": "block_image",
                   "link": "https://DrugBud-Suite.github.io/VoteM8",
                   "src": "https://raw.githubusercontent.com/DrugBud-Suite/VoteM8/main/docs/website/source/_media/logo/full_light.svg",
                   "src_dark": "https://raw.githubusercontent.com/DrugBud-Suite/VoteM8/main/docs/website/source/_media/logo/full_dark.svg",
-                  "title": "Welcome to My New Project! Click to visit our website and learn more.",
+                  "title": "Welcome to VoteM8! Click to visit our website and learn more.",
                   "width": "80%"
                },
                {
@@ -7142,7 +7139,7 @@
                      "align": "justify"
                   },
                   "class": "paragraph",
-                  "content": "Replace this text with a short abstract of My New Project, describing its purpose and main features. By default, this text is displayed on the repository's main README file, on the homepage of the project's website, on the project's PyPI and TestPyPI pages, and on the package's main docstring. Like all other entries in the repository's control center, this text can also contain dynamic references to other entries, using the <code>${\u200e{ json-path.to.value }}$</code> syntax. By default, the first occurrence of the name of the project in this text is styled as strong and linked to the project's website."
+                  "content": "VoteM8 is a Python library for consensus scoring and ranking of multi-criteria data.  It implements multiple scoring methods including ECR, RbR, TOPSIS, VIKOR and others to combine different evaluation metrics into unified rankings.  The library supports customizable weights, handles missing values, and provides both normalization and aggregation options.  It includes a command-line interface and can process both CSV and SDF file formats, making it particularly useful for processing molecular docking scores and other scientific data requiring consensus analysis."
                },
                [
                   {
@@ -7166,12 +7163,11 @@
                      ],
                      "height": "23px",
                      "items": [
-                        "First Keyword",
-                        "Second Keyword",
-                        "Third Keyword",
-                        "Fourth Keyword",
-                        "Fifth Keyword",
-                        "Sixth Keyword"
+                        "consensus",
+                        "scoring",
+                        "molecular docking",
+                        "protein-ligand scoring",
+                        "virtual screening"
                      ]
                   }
                ],
@@ -7234,16 +7230,16 @@
                         "class": "highlights",
                         "items": [
                            {
-                              "description": "Description of the first key feature of My New Project. By default, these highlights are displayed on the repository's main README file, on the homepage of the project's website, and on the project's PyPI and TestPyPI pages.",
-                              "title": "First Key Feature"
+                              "description": "Implements 12 different consensus scoring methods including ECR, RbR, TOPSIS,  VIKOR, and Pareto rankings. Each method can be used individually or combined  for robust consensus analysis of complex datasets.",
+                              "title": "Multiple Consensus Methods"
                            },
                            {
-                              "description": "Description of the second key feature of My New Project. For aesthetic reasons, it is recommended to keep the descriptions of all items in this list approximately the same length.",
-                              "title": "Second Key Feature"
+                              "description": "Handles both CSV and SDF file formats with built-in missing value strategies, customizable weights, and normalization options. Supports aggregation methods and weighted criteria to adapt to different analysis needs.",
+                              "title": "Flexible Data Processing"
                            },
                            {
-                              "description": "Description of the third key feature of My New Project. You can add as many keynotes as you want. However, in order to keep the READMEs clean and tidy, it is recommended to keep the number of keynotes between 3 and 7.",
-                              "title": "Third Key Feature"
+                              "description": "Provides an intuitive CLI for rapid analysis without coding. Users can specify methods, columns, weights, and other parameters directly from the command line, making it accessible for both programmers and non-programmers.",
+                              "title": "Command-Line Interface"
                            }
                         ]
                      }
@@ -7271,7 +7267,7 @@
          "main"
       ],
       "cli_names": [
-         "My-New-Project"
+         "VoteM8"
       ],
       "file": {
          "config": {
@@ -7320,14 +7316,14 @@
             "manifest": "pkg/MANIFEST.in",
             "pyproject": "pkg/pyproject.toml",
             "readme_pypi": "pkg/README.md",
-            "typed": "pkg/src/my_new_project/py.typed"
+            "typed": "pkg/src/votem8/py.typed"
          },
          "pkg_source": {
-            "my_new_project/__init__.py": "pkg/src/my_new_project/__init__.py",
-            "my_new_project/__main__.py": "pkg/src/my_new_project/__main__.py",
-            "my_new_project/data/__init__.py": "pkg/src/my_new_project/data/__init__.py",
-            "my_new_project/exception/__init__.py": "pkg/src/my_new_project/exception/__init__.py",
-            "my_new_project/exception/data.py": "pkg/src/my_new_project/exception/data.py"
+            "my_new_project/__init__.py": "pkg/src/votem8/__init__.py",
+            "my_new_project/__main__.py": "pkg/src/votem8/__main__.py",
+            "my_new_project/data/__init__.py": "pkg/src/votem8/data/__init__.py",
+            "my_new_project/exception/__init__.py": "pkg/src/votem8/exception/__init__.py",
+            "my_new_project/exception/data.py": "pkg/src/votem8/exception/data.py"
          },
          "pull_template": {
             "default": ".github/pull_request_template.md"
@@ -7340,19 +7336,19 @@
             "env_pip": "tests/requirements.txt",
             "manifest": "tests/MANIFEST.in",
             "pyproject": "tests/pyproject.toml",
-            "typed": "tests/src/my_new_project_testsuite/py.typed"
+            "typed": "tests/src/votem8_testsuite/py.typed"
          },
          "test_source": {
-            "my_new_project_testsuite/__init__.py": "tests/src/my_new_project_testsuite/__init__.py",
-            "my_new_project_testsuite/__main__.py": "tests/src/my_new_project_testsuite/__main__.py",
-            "my_new_project_testsuite/data_tests.py": "tests/src/my_new_project_testsuite/data_tests.py"
+            "my_new_project_testsuite/__init__.py": "tests/src/votem8_testsuite/__init__.py",
+            "my_new_project_testsuite/__main__.py": "tests/src/votem8_testsuite/__main__.py",
+            "my_new_project_testsuite/data_tests.py": "tests/src/votem8_testsuite/data_tests.py"
          },
          "tool_config": {
             "codecov": ".github/.codecov.yml",
-            "coverage": "tests/src/my_new_project_testsuite/data/config/coverage.toml",
+            "coverage": "tests/src/votem8_testsuite/data/config/coverage.toml",
             "mypy": ".github/.mypy.toml",
             "pre-commit": ".github/.pre-commit-config.yaml",
-            "pytest": "tests/src/my_new_project_testsuite/data/config/pytest.toml",
+            "pytest": "tests/src/votem8_testsuite/data/config/pytest.toml",
             "readthedocs": ".readthedocs.yaml",
             "ruff": ".github/.ruff.toml"
          },
@@ -7385,7 +7381,7 @@
          "pip"
       ],
       "python_api_names": [
-         "my_new_project"
+         "votem8"
       ],
       "python_versions": [
          "3.13",
@@ -7394,18 +7390,18 @@
          "3.10"
       ],
       "test_cli_names": [
-         "My-New-Project-TestSuite"
+         "VoteM8-TestSuite"
       ],
       "test_gui_names": [],
       "test_python_api_names": [
-         "my_new_project_testsuite"
+         "votem8_testsuite"
       ],
       "version": {
          "0.0.0": {
             "api_names": [],
             "branch": "main",
             "cli_names": [
-               "My-New-Project"
+               "VoteM8"
             ],
             "gui_names": [],
             "os_names": [
@@ -7417,7 +7413,7 @@
                "pip"
             ],
             "python_api_names": [
-               "my_new_project"
+               "votem8"
             ],
             "python_versions": [
                "3.10",
@@ -7426,11 +7422,11 @@
                "3.13"
             ],
             "test_cli_names": [
-               "My-New-Project-TestSuite"
+               "VoteM8-TestSuite"
             ],
             "test_gui_names": [],
             "test_python_api_names": [
-               "my_new_project_testsuite"
+               "votem8_testsuite"
             ]
          }
       },
@@ -7449,12 +7445,12 @@
             "body": [
                {
                   "align": "center",
-                  "alt": "My New Project: A Placeholder Project Title",
+                  "alt": "VoteM8: VoteM8 - A Python package for consensus scoring",
                   "class": "block_image",
                   "link": "https://DrugBud-Suite.github.io/VoteM8",
                   "src": "https://raw.githubusercontent.com/DrugBud-Suite/VoteM8/main/docs/website/source/_media/logo/full_light.svg",
                   "src_dark": "https://raw.githubusercontent.com/DrugBud-Suite/VoteM8/main/docs/website/source/_media/logo/full_dark.svg",
-                  "title": "Welcome to My New Project! Click to visit our website and learn more.",
+                  "title": "Welcome to VoteM8! Click to visit our website and learn more.",
                   "width": "80%"
                },
                {
@@ -7506,7 +7502,7 @@
                      "align": "justify"
                   },
                   "class": "paragraph",
-                  "content": "Replace this text with a short abstract of My New Project, describing its purpose and main features. By default, this text is displayed on the repository's main README file, on the homepage of the project's website, on the project's PyPI and TestPyPI pages, and on the package's main docstring. Like all other entries in the repository's control center, this text can also contain dynamic references to other entries, using the <code>${\u200e{ json-path.to.value }}$</code> syntax. By default, the first occurrence of the name of the project in this text is styled as strong and linked to the project's website."
+                  "content": "VoteM8 is a Python library for consensus scoring and ranking of multi-criteria data.  It implements multiple scoring methods including ECR, RbR, TOPSIS, VIKOR and others to combine different evaluation metrics into unified rankings.  The library supports customizable weights, handles missing values, and provides both normalization and aggregation options.  It includes a command-line interface and can process both CSV and SDF file formats, making it particularly useful for processing molecular docking scores and other scientific data requiring consensus analysis."
                },
                [
                   {
@@ -7530,12 +7526,11 @@
                      ],
                      "height": "23px",
                      "items": [
-                        "First Keyword",
-                        "Second Keyword",
-                        "Third Keyword",
-                        "Fourth Keyword",
-                        "Fifth Keyword",
-                        "Sixth Keyword"
+                        "consensus",
+                        "scoring",
+                        "molecular docking",
+                        "protein-ligand scoring",
+                        "virtual screening"
                      ]
                   }
                ],
@@ -7598,16 +7593,16 @@
                         "class": "highlights",
                         "items": [
                            {
-                              "description": "Description of the first key feature of My New Project. By default, these highlights are displayed on the repository's main README file, on the homepage of the project's website, and on the project's PyPI and TestPyPI pages.",
-                              "title": "First Key Feature"
+                              "description": "Implements 12 different consensus scoring methods including ECR, RbR, TOPSIS,  VIKOR, and Pareto rankings. Each method can be used individually or combined  for robust consensus analysis of complex datasets.",
+                              "title": "Multiple Consensus Methods"
                            },
                            {
-                              "description": "Description of the second key feature of My New Project. For aesthetic reasons, it is recommended to keep the descriptions of all items in this list approximately the same length.",
-                              "title": "Second Key Feature"
+                              "description": "Handles both CSV and SDF file formats with built-in missing value strategies, customizable weights, and normalization options. Supports aggregation methods and weighted criteria to adapt to different analysis needs.",
+                              "title": "Flexible Data Processing"
                            },
                            {
-                              "description": "Description of the third key feature of My New Project. You can add as many keynotes as you want. However, in order to keep the READMEs clean and tidy, it is recommended to keep the number of keynotes between 3 and 7.",
-                              "title": "Third Key Feature"
+                              "description": "Provides an intuitive CLI for rapid analysis without coding. Users can specify methods, columns, weights, and other parameters directly from the command line, making it accessible for both programmers and non-programmers.",
+                              "title": "Command-Line Interface"
                            }
                         ]
                      }
@@ -7631,7 +7626,7 @@
       "created_at": "2024-10-30",
       "default_branch": "main",
       "delete_branch_on_merge": true,
-      "description": "A Placeholder Project Title",
+      "description": "VoteM8 - A Python package for consensus scoring",
       "full_name": "DrugBud-Suite/VoteM8",
       "gitattributes": [
          {
@@ -8228,12 +8223,11 @@
       "squash_merge_commit_message": "PR_BODY",
       "squash_merge_commit_title": "PR_TITLE",
       "topics": [
-         "first-keyword",
-         "second-keyword",
-         "third-keyword",
-         "fourth-keyword",
-         "fifth-keyword",
-         "sixth-keyword"
+         "consensus",
+         "scoring",
+         "molecular-docking",
+         "protein-ligand-scoring",
+         "virtual-screening"
       ],
       "url": {
          "actions": {
@@ -8374,12 +8368,12 @@
                   "distance-dirty": "{base_version}+{distance}.{committer_date:%Y.%m.%d}.{rev}.dirty"
                },
                "onbuild": {
-                  "build-file": "my_new_project_testsuite/__init__.py",
+                  "build-file": "votem8_testsuite/__init__.py",
                   "method": "replace-version",
                   "regex": "^__version_details__: dict\\[str, str\\] = (?P<version>.*)",
                   "replacement": "{{\n    \"version\": \"{version}\",\n    \"build_date\": \"{build_date:%Y.%m.%d}\",\n    \"committer_date\": \"{committer_date:%Y.%m.%d}\",\n    \"author_date\": \"{author_date:%Y.%m.%d}\",\n    \"branch\": \"{branch}\",\n    \"distance\": \"{distance}\",\n    \"commit_hash\": \"{revision}\",\n}}\n",
                   "require-match": true,
-                  "source-file": "src/my_new_project_testsuite/__init__.py"
+                  "source-file": "src/votem8_testsuite/__init__.py"
                },
                "tag2version": {
                   "rmprefix": "ver/"
@@ -8490,7 +8484,7 @@
          },
          "env": {
             "conda": {
-               "name": "my_new_project_testsuite",
+               "name": "votem8_testsuite",
                "path": "tests/conda_env.yaml"
             },
             "pip": {
@@ -8498,44 +8492,43 @@
             }
          }
       },
-      "description": "A Placeholder Project Title",
+      "description": "VoteM8 - A Python package for consensus scoring",
       "entry": {
          "cli": {
             "main": {
                "description": "Main CLI entry of the test-suite.",
-               "name": "My-New-Project-TestSuite",
-               "ref": "my_new_project_testsuite:__main__"
+               "name": "VoteM8-TestSuite",
+               "ref": "votem8_testsuite:__main__"
             }
          },
          "python": {
             "main": {
                "description": "Main Python API entry of the package.",
-               "name": "my_new_project_testsuite",
-               "ref": "my_new_project_testsuite:__init__"
+               "name": "votem8_testsuite",
+               "ref": "votem8_testsuite:__init__"
             }
          }
       },
       "file": {
          "__init__.py": {
-            "docstring": "My New Project Test-Suite.\n\n\u00a9 2024 DrugM8\nSPDX-License-Identifier: MIT\n\n"
+            "docstring": "VoteM8 Test-Suite.\n\n\u00a9 2024 DrugM8\nSPDX-License-Identifier: MIT\n\n"
          }
       },
-      "import_name": "my_new_project_testsuite",
+      "import_name": "votem8_testsuite",
       "keywords": [
-         "First Keyword",
-         "Second Keyword",
-         "Third Keyword",
-         "Fourth Keyword",
-         "Fifth Keyword",
-         "Sixth Keyword"
+         "consensus",
+         "scoring",
+         "molecular docking",
+         "protein-ligand scoring",
+         "virtual screening"
       ],
       "license": "MIT",
       "manifest": [
-         "graft src/my_new_project_testsuite/data",
-         "include src/my_new_project_testsuite/py.typed",
+         "graft src/votem8_testsuite/data",
+         "include src/votem8_testsuite/py.typed",
          "global-exclude *.py[cod] __pycache__ *.so"
       ],
-      "name": "My-New-Project-TestSuite",
+      "name": "VoteM8-TestSuite",
       "os": {
          "linux": {
             "name": "Linux",
@@ -8552,14 +8545,14 @@
       },
       "os_independent": true,
       "path": {
-         "import": "tests/src/my_new_project_testsuite",
+         "import": "tests/src/votem8_testsuite",
          "root": "tests",
          "source": "tests/src",
          "source_rel": "src"
       },
       "pypi": {
          "url": {
-            "home": "https://pypi.org/project/My-New-Project-TestSuite"
+            "home": "https://pypi.org/project/VoteM8-TestSuite"
          }
       },
       "python": {
@@ -8647,7 +8640,7 @@
             "items": [
                {
                   "align": "left",
-                  "alt": "My New Project",
+                  "alt": "VoteM8",
                   "args": {
                      "prefix": "\u00a9",
                      "query": "$.copyright",
@@ -8655,14 +8648,14 @@
                   },
                   "color": "#0F3460",
                   "color_dark": "#3A98B9",
-                  "label": "My New Project",
+                  "label": "VoteM8",
                   "link": "https://DrugBud-Suite.github.io/VoteM8",
                   "logo": "docs/website/source/_media/logo/favicon.svg",
                   "logo_dark": "docs/website/source/_media/logo/favicon.svg",
                   "logo_type": "file",
                   "logo_type_dark": "file",
                   "service": "dynamic",
-                  "title": "My New Project: \u00a9 2024 DrugM8"
+                  "title": "VoteM8: \u00a9 2024 DrugM8"
                },
                {
                   "align": "right",
@@ -8735,7 +8728,7 @@
          }
       }
    },
-   "title": "A Placeholder Project Title",
+   "title": "VoteM8 - A Python package for consensus scoring",
    "tool": {
       "codecov": {
          "config": {
@@ -8773,7 +8766,7 @@
                      "coverage": {
                         "html": {
                            "directory": "$|| path_report ||/coverage/html",
-                           "title": "My-New-Project Test Coverage"
+                           "title": "VoteM8 Test Coverage"
                         },
                         "json": {
                            "output": "$|| path_report ||/coverage/coverage.json",
@@ -8797,7 +8790,7 @@
                            "data_file": "$|| path_cache ||/coverage/coverage",
                            "debug_file": "$|| path_report ||/coverage/debug.log",
                            "source_pkgs": [
-                              "my_new_project"
+                              "votem8"
                            ]
                         },
                         "xml": {
@@ -8806,7 +8799,7 @@
                      }
                   }
                },
-               "path": "tests/src/my_new_project_testsuite/data/config/coverage.toml",
+               "path": "tests/src/votem8_testsuite/data/config/coverage.toml",
                "type": "toml"
             }
          }
@@ -8825,7 +8818,7 @@
                         "linecoverage_report": ".local/report/mypy",
                         "lineprecision_report": ".local/report/mypy",
                         "packages": [
-                           "my_new_project"
+                           "votem8"
                         ],
                         "pretty": true,
                         "raise_exceptions": true,
@@ -9156,7 +9149,7 @@
                            "cache_dir": "$|| path_cache ||/pytest",
                            "console_output_style": "count",
                            "junit_logging": "all",
-                           "junit_suite_name": "my_new_project_testsuite",
+                           "junit_suite_name": "votem8_testsuite",
                            "log_auto_indent": true,
                            "log_cli": true,
                            "log_cli_date_format": "%Y-%m-%d %H:%M:%S",
@@ -9194,7 +9187,7 @@
                      }
                   }
                },
-               "path": "tests/src/my_new_project_testsuite/data/config/pytest.toml",
+               "path": "tests/src/votem8_testsuite/data/config/pytest.toml",
                "type": "toml"
             }
          }
@@ -9297,16 +9290,16 @@
                         "docs/website/source/conf.py": [
                            "TRY003"
                         ],
-                        "pkg/src/my_new_project/__main__.py": [
+                        "pkg/src/votem8/__main__.py": [
                            "T20"
                         ],
                         "tests/src/**": [
                            "S101"
                         ],
-                        "tests/src/my_new_project_testsuite/__init__.py": [
+                        "tests/src/votem8_testsuite/__init__.py": [
                            "T20"
                         ],
-                        "tests/src/my_new_project_testsuite/__main__.py": [
+                        "tests/src/votem8_testsuite/__main__.py": [
                            "T20"
                         ]
                      },
@@ -9507,7 +9500,7 @@
                "blog_post_pattern": [
                   "news/post/*.md"
                ],
-               "blog_title": "My New Project News",
+               "blog_title": "VoteM8 News",
                "fontawesome_included": true,
                "post_always_section": true,
                "post_auto_image": 1,
@@ -9541,7 +9534,7 @@
                "autodoc2_index_template": null,
                "autodoc2_output_dir": "api",
                "autodoc2_packages": [
-                  "../../../pkg/src/my_new_project"
+                  "../../../pkg/src/votem8"
                ],
                "autodoc2_render_plugin": "myst",
                "autodoc2_sort_names": true
@@ -9952,7 +9945,7 @@
             "html_last_updated_fmt": "%b %d, %Y",
             "html_math_renderer": "mathjax",
             "html_secnumber_suffix": ".\u2002",
-            "html_short_title": "My New Project",
+            "html_short_title": "VoteM8",
             "html_show_sphinx": false,
             "html_sidebars": {
                "news/**": [
@@ -9969,7 +9962,7 @@
                "_media/logo/simple_light.svg",
                "_media/logo/simple_dark.svg"
             ],
-            "html_title": "My New Project",
+            "html_title": "VoteM8",
             "html_use_opensearch": "https://DrugBud-Suite.github.io/VoteM8",
             "language": "en",
             "latex_elements": {
@@ -9995,7 +9988,7 @@
             "nitpicky": true,
             "numfig": true,
             "numfig_secnum_depth": 3,
-            "project": "My New Project",
+            "project": "VoteM8",
             "project_copyright": "\u00a9 2024 DrugM8",
             "pygment_style": "default",
             "python_display_short_literal_types": true,
@@ -10137,7 +10130,7 @@
                   {
                      "icon": "fa-brands fa-python",
                      "name": "PyPI Distribution",
-                     "url": "https://pypi.org/project/My-New-Project"
+                     "url": "https://pypi.org/project/VoteM8"
                   },
                   {
                      "icon": "fa-brands fa-github",
@@ -10167,7 +10160,7 @@
                ],
                "icon_links_label": "External links",
                "logo": {
-                  "alt_text": "My New Project",
+                  "alt_text": "VoteM8",
                   "image_dark": "_static/simple_dark.svg",
                   "image_light": "_static/simple_light.svg"
                },
@@ -10189,7 +10182,7 @@
                "primary_sidebar_end": [],
                "pygments_dark_style": "monokai",
                "pygments_light_style": "default",
-               "search_bar_text": "Search My New Project",
+               "search_bar_text": "Search VoteM8",
                "secondary_sidebar_items": [
                   "page-toc",
                   "last-updated",
@@ -10260,7 +10253,7 @@
             {
                "entries": [
                   {
-                     "file": "api/my_new_project/my_new_project"
+                     "file": "api/votem8/votem8"
                   }
                ],
                "file": "api/index",

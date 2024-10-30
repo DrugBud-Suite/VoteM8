@@ -31,10 +31,10 @@ max-complexity = 15
 
 [lint.per-file-ignores]
 "docs/website/source/conf.py" = ["TRY003"]
-"pkg/src/my_new_project/__main__.py" = ["T20"]
+"pkg/src/votem8/__main__.py" = ["T20"]
 "tests/src/**" = ["S101"]
-"tests/src/my_new_project_testsuite/__init__.py" = ["T20"]
-"tests/src/my_new_project_testsuite/__main__.py" = ["T20"]
+"tests/src/votem8_testsuite/__init__.py" = ["T20"]
+"tests/src/votem8_testsuite/__main__.py" = ["T20"]
 
 [lint.pydocstyle]
 convention = "numpy"

@@ -1,10 +1,10 @@
 name:  🧪 Test ⌨️ CLI ✨ Feature Request
-description: Request backward-compatible improvements and new functionalities in My-New-Project-TestSuite's
+description: Request backward-compatible improvements and new functionalities in VoteM8-TestSuite's
   CLI.
 body:
 - type: markdown
   attributes:
-    value: "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n\
+    value: "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n\
       \  we greatly appreciate your contribution!\n  Before submitting a ticket,\n\
       \  please take a moment to review and accept our terms and conditions.\n</p>"
 - type: markdown
@@ -14,10 +14,10 @@ body:
   attributes:
     value: "### ⛔ Choosing the Right Form\n\n<p align=\"justify\">\n  Please note
       that this form is specifically for requesting a <b>backward-compatible improvement</b>
-      or <b>new functionality</b> in My-New-Project-TestSuite's CLI, i.e. a non-breaking
-      change (that is not a bug fix) in My-New-Project-TestSuite's command-line interface.,\n\
-      \  For other types of issues and requests, select the appropriate form\n  from
-      the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue
+      or <b>new functionality</b> in VoteM8-TestSuite's CLI, i.e. a non-breaking change
+      (that is not a bug fix) in VoteM8-TestSuite's command-line interface.,\n  For
+      other types of issues and requests, select the appropriate form\n  from the
+      <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\">issue
       template chooser</a>.\n  If you are unsure about which form to choose or have
       another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\"\
       >discussion forum</a>.\n</p>\n"
@@ -42,10 +42,10 @@ body:
   attributes:
     label: 'To submit an issue, please agree to the following terms and conditions:'
     options:
-    - label: "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!--
+    - label: "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!--
         ISSUE-ID: test_cli_feat -->"
       required: true
-    - label: I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).
+    - label: I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).
       required: true
 - type: markdown
   attributes:
@@ -65,7 +65,7 @@ body:
   id: version
   attributes:
     label: Version
-    description: "Please select all relevant My New Project versions.\n"
+    description: "Please select all relevant VoteM8 versions.\n"
     multiple: true
     options:
     - 0.0.0
@@ -79,7 +79,7 @@ body:
     description: Please select the relevant CLI entry point.
     multiple: false
     options:
-    - My-New-Project-TestSuite
+    - VoteM8-TestSuite
     default: 0
   validations:
     required: true

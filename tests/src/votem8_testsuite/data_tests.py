@@ -2,8 +2,8 @@
 
 import pytest
 
-import my_new_project as pkg
-from my_new_project.exception.data import DataFileNotFoundError
+import votem8 as pkg
+from votem8.exception.data import DataFileNotFoundError
 
 
 def test_file():

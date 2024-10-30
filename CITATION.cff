@@ -1,24 +1,27 @@
 message: If you use VoteM8, please cite it using this reference.
-title: 'VoteM8: A Placeholder Project Title'
+title: 'VoteM8: VoteM8 - A Python package for consensus scoring'
 version: ''
 date-released: ''
 doi: ''
 commit: ''
 license: MIT
 url: https://DrugBud-Suite.github.io/VoteM8
-repository-artifact: https://pypi.org/project/My-New-Project
+repository-artifact: https://pypi.org/project/VoteM8
 repository-code: https://github.com/DrugBud-Suite/VoteM8
 type: software
 keywords:
-  - consensus
-  - scoring
-  - molecular docking
-  - protein-ligand scoring
-  - virtual screening
-abstract: VoteM8 is a Python library for consensus scoring and ranking of multi-criteria data. 
-  It implements multiple scoring methods including ECR, RbR, TOPSIS, VIKOR and others to combine different evaluation metrics into unified rankings. 
-  The library supports customizable weights, handles missing values, and provides both normalization and aggregation options. 
-  It includes a command-line interface and can process both CSV and SDF file formats, making it particularly useful for processing molecular docking scores and other scientific data requiring consensus analysis.
+- consensus
+- scoring
+- molecular docking
+- protein-ligand scoring
+- virtual screening
+abstract: VoteM8 is a Python library for consensus scoring and ranking of multi-criteria
+  data.  It implements multiple scoring methods including ECR, RbR, TOPSIS, VIKOR
+  and others to combine different evaluation metrics into unified rankings.  The library
+  supports customizable weights, handles missing values, and provides both normalization
+  and aggregation options.  It includes a command-line interface and can process both
+  CSV and SDF file formats, making it particularly useful for processing molecular
+  docking scores and other scientific data requiring consensus analysis.
 contact:
 - name: DrugM8
   email: alacournola+drugbud@gmail.com

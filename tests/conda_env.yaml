@@ -1,4 +1,4 @@
-name: my-new-project-testsuite
+name: votem8-testsuite
 channels:
 - conda-forge
 - defaults

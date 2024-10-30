@@ -1,9 +1,9 @@
 name:  ⌨️ CLI 🐞 Bug Report
-description: Report problems and errors in My-New-Project's CLI.
+description: Report problems and errors in VoteM8's CLI.
 body:
 - type: markdown
   attributes:
-    value: "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n\
+    value: "<p align=\"justify\">\n  Thank you for providing feedback on VoteM8;\n\
       \  we greatly appreciate your contribution!\n  Before submitting a ticket,\n\
       \  please take a moment to review and accept our terms and conditions.\n</p>"
 - type: markdown
@@ -13,9 +13,9 @@ body:
   attributes:
     value: "### ⛔ Choosing the Right Form\n\n<p align=\"justify\">\n  Please note
       that this form is specifically for reporting a <b>non-security-related bug in
-      My-New-Project's CLI</b>, i.e. an unexpected behavior or result in My-New-Project's
-      command-line interface.,\n  For other types of issues and requests, select the
-      appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\"\
+      VoteM8's CLI</b>, i.e. an unexpected behavior or result in VoteM8's command-line
+      interface.,\n  For other types of issues and requests, select the appropriate
+      form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\"\
       >issue template chooser</a>.\n  If you are unsure about which form to choose
       or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\"\
       >discussion forum</a>.\n</p>\n"
@@ -40,10 +40,10 @@ body:
   attributes:
     label: 'To submit an issue, please agree to the following terms and conditions:'
     options:
-    - label: "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!--
+    - label: "I confirm that I am following VoteM8's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!--
         ISSUE-ID: pkg_cli_fix -->"
       required: true
-    - label: I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).
+    - label: I agree to follow VoteM8's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).
       required: true
 - type: markdown
   attributes:
@@ -91,8 +91,7 @@ body:
   id: package_manager
   attributes:
     label: Package Manager
-    description: "Please select the package manager used to download and install My
-      New Project.\n"
+    description: "Please select the package manager used to download and install VoteM8.\n"
     multiple: false
     options:
     - pip
@@ -121,7 +120,7 @@ body:
   id: version
   attributes:
     label: Version
-    description: "Please select all relevant My New Project versions.\n"
+    description: "Please select all relevant VoteM8 versions.\n"
     multiple: true
     options:
     - 0.0.0
@@ -135,7 +134,7 @@ body:
     description: Please select the relevant CLI entry point.
     multiple: false
     options:
-    - My-New-Project
+    - VoteM8
     default: 0
   validations:
     required: true

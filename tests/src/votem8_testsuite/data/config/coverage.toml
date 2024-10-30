@@ -1,7 +1,7 @@
 [tool.coverage]
 [tool.coverage.html]
 directory = "$|| path_report ||/coverage/html"
-title = "My-New-Project Test Coverage"
+title = "VoteM8 Test Coverage"
 
 [tool.coverage.json]
 output = "$|| path_report ||/coverage/coverage.json"
@@ -15,7 +15,7 @@ show_missing = true
 branch = true
 data_file = "$|| path_cache ||/coverage/coverage"
 debug_file = "$|| path_report ||/coverage/debug.log"
-source_pkgs = ["my_new_project"]
+source_pkgs = ["votem8"]
 
 [tool.coverage.xml]
 output = "$|| path_report ||/coverage/coverage.xml"
