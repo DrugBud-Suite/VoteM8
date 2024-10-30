@@ -4,7 +4,7 @@ ccid: contribute
 
 # Contribution Guide
 
-We welcome contributions from external contributors, and this document describes how to merge code changes into `VoteM8`. 
+We welcome contributions from external contributors, and this document describes how to merge code changes into `VoteM8`.
 
 ## Getting Started
 
