@@ -1,11 +1,11 @@
 theme:
   color:
     primary:
-      light: '#0F3460'
-      dark: '#3A98B9'
+      light: '#992D72'
+      dark: '#9D41A1'
     secondary:
-      light: '#562B08'
-      dark: '#E3651D'
+      light: '#2F2F2F'
+      dark: '#2F2F2F'
   logo:
     __custom__:
       web_dir: _media/logo
@@ -111,13 +111,13 @@ readme:
         - - class: button
             text: 'Keywords: '
             style: plastic
-            color: '#2c2e30'
-            color_dark: '#2c2e30'
-            height: 23px
+            color: '#992D72'
+            color_dark: '#9D41A1'
+            height: 15px
           - '&nbsp;&nbsp;'
           - class: buttons
             items: ${{ keywords }}$
-            height: 23px
+            height: 15px
             color: [ '${{ theme.color.primary.light }}$', '${{ theme.color.secondary.light }}$' ]
             color_dark: [ '${{ theme.color.primary.dark }}$', '${{ theme.color.secondary.dark }}$' ]
         - class: menu
