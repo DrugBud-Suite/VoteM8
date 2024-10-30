@@ -1,4 +1,4 @@
-"""My New Project Test-Suite.
+"""VoteM8 Test-Suite.
 
 © 2024 DrugM8
 SPDX-License-Identifier: MIT

@@ -20,7 +20,7 @@ entries:
 - file: api/index
   title: API
   entries:
-  - file: api/my_new_project/my_new_project
+  - file: api/votem8/votem8
 - file: news/index
   title: News
   entries:

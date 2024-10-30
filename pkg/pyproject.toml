@@ -1,13 +1,12 @@
 [project]
-name = "My-New-Project"
-description = "A Placeholder Project Title"
+name = "VoteM8"
+description = "VoteM8 - A Python package for consensus scoring"
 keywords = [
-    "First Keyword",
-    "Second Keyword",
-    "Third Keyword",
-    "Fourth Keyword",
-    "Fifth Keyword",
-    "Sixth Keyword",
+    "consensus",
+    "scoring",
+    "molecular docking",
+    "protein-ligand scoring",
+    "virtual screening",
 ]
 classifiers = [
     "Operating System :: OS Independent",
@@ -44,7 +43,7 @@ News = "https://DrugBud-Suite.github.io/VoteM8/news"
 Issue-Tracker = "https://github.com/DrugBud-Suite/VoteM8/issues"
 
 [project.scripts]
-My-New-Project = "my_new_project:__main__"
+VoteM8 = "votem8:__main__"
 
 [build-system]
 requires = [
@@ -84,6 +83,6 @@ distance-dirty = "{base_version}+{distance}.{committer_date:%Y.%m.%d}.{rev}.dirt
 method = "replace-version"
 regex = "^__version_details__: dict\\[str, str\\] = (?P<version>.*)"
 require-match = true
-source-file = "src/my_new_project/__init__.py"
-build-file = "my_new_project/__init__.py"
+source-file = "src/votem8/__init__.py"
+build-file = "votem8/__init__.py"
 replacement = "{{\n    \"version\": \"{version}\",\n    \"build_date\": \"{build_date:%Y.%m.%d}\",\n    \"committer_date\": \"{committer_date:%Y.%m.%d}\",\n    \"author_date\": \"{author_date:%Y.%m.%d}\",\n    \"branch\": \"{branch}\",\n    \"distance\": \"{distance}\",\n    \"commit_hash\": \"{revision}\",\n}}\n"

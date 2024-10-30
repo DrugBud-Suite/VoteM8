@@ -3,7 +3,7 @@ addopts = "-r a --verbose --color=yes --full-trace --strict-config --junit-xml='
 cache_dir = "$|| path_cache ||/pytest"
 console_output_style = "count"
 junit_logging = "all"
-junit_suite_name = "my_new_project_testsuite"
+junit_suite_name = "votem8_testsuite"
 log_auto_indent = true
 log_cli = true
 log_cli_date_format = "%Y-%m-%d %H:%M:%S"

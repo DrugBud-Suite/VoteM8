@@ -1,4 +1,4 @@
-name: my-new-project
+name: votem8
 channels:
 - defaults
 dependencies:
