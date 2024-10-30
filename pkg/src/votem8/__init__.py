@@ -1,10 +1,10 @@
 """VoteM8: VoteM8 - A Python package for consensus scoring.
 
 VoteM8 is a Python library for consensus scoring and ranking of multi-criteria
-data.  It implements multiple scoring methods including ECR, RbR, TOPSIS, VIKOR
-and others to combine different evaluation metrics into unified rankings.  The
+data. It implements multiple scoring methods including ECR, RbR, TOPSIS, VIKOR
+and others to combine different evaluation metrics into unified rankings. The
 library supports customizable weights, handles missing values, and provides both
-normalization and aggregation options.  It includes a command-line interface and
+normalization and aggregation options. It includes a command-line interface and
 can process both CSV and SDF file formats, making it particularly useful for
 processing molecular docking scores and other scientific data requiring
 consensus analysis.
