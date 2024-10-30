@@ -1,0 +1,52 @@
+name: '[Callable]: Package - Publish'
+
+on:
+  workflow_call:
+    inputs:
+      config:
+        type: string
+        required: true
+        description: Configuration as a JSON string.
+#      download-url:
+#        type: string
+#        required: true
+#        description: |
+#          Expected URL of the specific package version on the indexing platform.
+#      upload-url:
+#        type: string
+#        required: true
+#        description: |
+#          URL of the package index to upload to.
+#      platform:
+#        type: string
+#        default: 'TestPyPI'
+#        required: false
+#        description: |
+#          Platform to publish to; either 'TestPyPI' (default) or 'PyPI'.
+
+jobs:
+  package-release-pypi:
+    name: ${{ fromJSON(inputs.config).platform }}
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ fromJSON(inputs.config).platform }}
+      url: ${{ fromJSON(inputs.config).download-url }}
+    permissions:
+      id-token: write
+    steps:
+      - name: Build Download
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ fromJSON(inputs.config).artifact-name }}
+          path: build
+      - name: Publish
+        uses: pypa/gh-action-pypi-publish@release/v1
+        # https://github.com/marketplace/actions/pypi-publish
+        with:
+          packages-dir: build/dist
+          repository-url: ${{ fromJSON(inputs.config).upload-url }}
+          verify-metadata: true
+          verbose: true
+          print-hash: true
+          skip-existing: false
+          attestations: false  # Unstable at the moment.

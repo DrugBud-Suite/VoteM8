@@ -1,0 +1,50 @@
+name: My New Project
+title: A Placeholder Project Title
+abstract: >-
+  Replace this text with a short abstract of ${{ name }}$,
+  describing its purpose and main features.
+  By default, this text is displayed on the repository's main README file,
+  on the homepage of the project's website,
+  on the project's PyPI and TestPyPI pages,
+  and on the package's main docstring.
+  Like all other entries in the repository's control center,
+  this text can also contain dynamic references to other entries,
+  using the <code>${‎{ json-path.to.value }}$</code> syntax.
+  By default, the first occurrence of the name of the project
+  in this text is styled as strong and linked to the project's website.
+keywords:
+  - First Keyword
+  - Second Keyword
+  - Third Keyword
+  - Fourth Keyword
+  - Fifth Keyword
+  - Sixth Keyword
+highlights:
+  - title: First Key Feature
+    description: >-
+      Description of the first key feature of ${{ name }}$.
+      By default, these highlights are displayed on the repository's main README file,
+      on the homepage of the project's website, and on the project's PyPI and TestPyPI pages.
+  - title: Second Key Feature
+    description: >-
+      Description of the second key feature of ${{ name }}$.
+      For aesthetic reasons, it is recommended to keep the descriptions of all items
+      in this list approximately the same length.
+  - title: Third Key Feature
+    description: >-
+      Description of the third key feature of ${{ name }}$.
+      You can add as many keynotes as you want.
+      However, in order to keep the READMEs clean and tidy,
+      it is recommended to keep the number of keynotes between 3 and 7.
+license:
+  expression: MIT
+  header: |
+    ${{ copyright }}$
+    SPDX-License-Identifier: ${{ license.expression }}$
+maintainer:
+  code_owners:
+    entries:
+      - glob: "*"
+        owners: [ owner ]
+citation:
+  title: '${{ name }}$: ${{ title }}$'

@@ -1,0 +1,128 @@
+name: '[Callable]: Project Manager'
+on:
+  workflow_call:
+#    inputs:
+#      meta-sync:
+#        type: string
+#        default: report
+#        required: false
+#        description: |
+#          The action to take when the dynamic files are out of sync with the repository meta content.
+#          Selecting 'none' will disable this action.
+#      hooks:
+#        type: string
+#        default: report
+#        required: false
+#        description: |
+#          The action to take when running the workflow hooks.
+#          Selecting 'none' will disable this action.
+#      package-build:
+#        type: boolean
+#        required: false
+#        default: false
+#        description: |
+#          Build the package and upload the builds as artifacts.
+#      package-lint:
+#        type: boolean
+#        required: false
+#        default: false
+#        description: |
+#          Run the linting workflow.
+#      package-test:
+#        type: boolean
+#        required: false
+#        default: false
+#        description: |
+#          Run the test workflow on package.
+#      website-build:
+#        type: boolean
+#        required: false
+#        default: false
+#        description: |
+#          Build the documentation with Sphinx and upload the builds as artifacts.
+#      first-major-release:
+#        type: boolean
+#        required: false
+#        default: false
+#        description: |
+#          Release the current 0.X.Y version as the first major release.
+    secrets:
+      repo-admin-token:
+        description: 'Token with admin permissions to the repository.'
+        required: false
+    outputs:
+      run:
+        value: ${{ jobs.manager.outputs.run }}
+        description: Whether to run subsequent jobs.
+      website:
+        value: ${{ jobs.manager.outputs.website }}
+        description: Configurations for website job.
+      lint:
+        value: ${{ jobs.manager.outputs.lint }}
+        description: Configurations for lint job.
+      test:
+        value: ${{ jobs.manager.outputs.test }}
+        description: Configurations for test job.
+      build:
+        value: ${{ jobs.manager.outputs.build }}
+        description: Configurations for build job.
+      publish-testpypi:
+        value: ${{ jobs.manager.outputs.publish-testpypi }}
+        description: Configurations for publish-testpypi job.
+      test-testpypi:
+        value: ${{ jobs.manager.outputs.test-testpypi }}
+        description: Configurations for test-testpypi job.
+      publish-pypi:
+        value: ${{ jobs.manager.outputs.publish-pypi }}
+        description: Configurations for publish-pypi job.
+      test-pypi:
+        value: ${{ jobs.manager.outputs.test-pypi }}
+        description: Configurations for test-pypi job.
+      finalize:
+        value: ${{ jobs.manager.outputs.finalize }}
+        description: Configurations for finalize job.
+jobs:
+  manager:
+    name: 'Manager'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    outputs:
+      fail: ${{ steps.proman.outputs.fail }}
+      run: ${{ steps.proman.outputs.run }}
+      website: ${{ steps.proman.outputs.website }}
+      lint: ${{ steps.proman.outputs.lint }}
+      test: ${{ steps.proman.outputs.test }}
+      build: ${{ steps.proman.outputs.build }}
+      publish-testpypi: ${{ steps.proman.outputs.publish-testpypi }}
+      test-testpypi: ${{ steps.proman.outputs.test-testpypi }}
+      publish-pypi: ${{ steps.proman.outputs.publish-pypi }}
+      test-pypi: ${{ steps.proman.outputs.test-pypi }}
+      finalize: ${{ steps.proman.outputs.finalize }}
+    steps:
+      - name: 'Project Manager'
+        id: proman
+        uses: RepoDynamics/ProMan@v1
+        with:
+          admin-token: ${{ secrets.repo-admin-token }}
+#          package-build: ${{ inputs.package-build }}
+#          package-lint: ${{ inputs.package-lint }}
+#          package-test: ${{ inputs.package-test }}
+#          website-build: ${{ inputs.website-build }}
+#          meta-sync: ${{ inputs.meta-sync }}
+#          hooks: ${{ inputs.hooks }}
+#          first-major-release: ${{ inputs.first-major-release }}
+  status:
+    name: 'Status'
+    runs-on: ubuntu-latest
+    needs: manager
+    steps:
+      - name: 'Status Check'
+        run: |
+          if [ "${{ needs.manager.outputs.fail }}" = "true" ]; then
+            exit 1
+          else
+            exit 0
+          fi

@@ -1,0 +1,97 @@
+name:  🧪 Test ⌨️ CLI 💥 Change Request
+description: Request backward-incompatible changes to My-New-Project-TestSuite's CLI.
+body:
+- type: markdown
+  attributes:
+    value: "<p align=\"justify\">\n  Thank you for providing feedback on My New Project;\n\
+      \  we greatly appreciate your contribution!\n  Before submitting a ticket,\n\
+      \  please take a moment to review and accept our terms and conditions.\n</p>"
+- type: markdown
+  attributes:
+    value: "<br>\n\n## 🤝 Terms and Conditions\n"
+- type: markdown
+  attributes:
+    value: "### ⛔ Choosing the Right Form\n\n<p align=\"justify\">\n  Please note
+      that this form is specifically for requesting a <b>backward-incompatible change</b>
+      in My-New-Project-TestSuite's CLI, i.e. a breaking change in behaviour or functionalities
+      of My-New-Project-TestSuite's command-line interface.,\n  For other types of
+      issues and requests, select the appropriate form\n  from the <a href=\"https://github.com/DrugBud-Suite/VoteM8/issues/new/choose\"\
+      >issue template chooser</a>.\n  If you are unsure about which form to choose
+      or have another inquiry,\n  please open a discussion in our <a href=\"https://github.com/DrugBud-Suite/VoteM8/discussions\"\
+      >discussion forum</a>.\n</p>\n"
+- type: markdown
+  attributes:
+    value: "### ⚠️ Verifying the Request\n\n<p align=\"justify\">\n  Before submitting
+      a report, please make sure that you are following our\n  <a href=\"https://DrugBud-Suite.github.io/VoteM8/contribute\"\
+      >Change Request Guidelines</a> to verify that:\n</p>\n\n- <p align=\"justify\"\
+      >Your request is for a backward-incompatible change, and not a new feature,
+      improvement, or bug fix.</p>\n- <p align=\"justify\">The request is not implemented
+      in the latest version of the release, and has not yet been filed.</p>\n"
+- type: markdown
+  attributes:
+    value: "### ℹ️ Choosing the Right Title\n\n<p align=\"justify\">Please write a
+      concise and descriptive title and\nuse relevant keywords to help others find
+      the issue.</p>\n"
+- type: markdown
+  attributes:
+    value: '### ✅ Agreements'
+- type: checkboxes
+  id: terms
+  attributes:
+    label: 'To submit an issue, please agree to the following terms and conditions:'
+    options:
+    - label: "I confirm that I am following My New Project's [Contribution Guidelines](https://DrugBud-Suite.github.io/VoteM8/contribute).<!--
+        ISSUE-ID: test_cli_change -->"
+      required: true
+    - label: I agree to follow My New Project's [Code of Conduct](https://github.com/DrugBud-Suite/VoteM8/blob/main/CODE_OF_CONDUCT.md).
+      required: true
+- type: markdown
+  attributes:
+    value: '### 🧑‍💻️ Collaboration'
+- type: checkboxes
+  id: collab
+  attributes:
+    label: "Thank you again for filling out this ticket.\nIf you are willing to collaborate
+      on its implementation,\nplease select the option below.\n"
+    options:
+    - label: I am willing to collaborate on this issue and submit a pull request.
+      required: false
+- type: markdown
+  attributes:
+    value: "<br>\n\n## 💥 Change Request\n"
+- type: dropdown
+  id: version
+  attributes:
+    label: Version
+    description: "Please select all relevant My New Project versions.\n"
+    multiple: true
+    options:
+    - 0.0.0
+    default: 0
+  validations:
+    required: true
+- type: dropdown
+  id: entrypoint
+  attributes:
+    label: CLI Entry Point
+    description: Please select the relevant CLI entry point.
+    multiple: false
+    options:
+    - My-New-Project-TestSuite
+    default: 0
+  validations:
+    required: true
+- type: textarea
+  id: summary
+  attributes:
+    label: Summary
+    description: Please provide a summary of the issue.
+  validations:
+    required: true
+- type: textarea
+  id: proposal
+  attributes:
+    label: Proposal
+    description: Please describe your proposal in detail.
+  validations:
+    required: true

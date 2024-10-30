@@ -1,0 +1,8 @@
+name: my-new-project
+channels:
+- defaults
+dependencies:
+- python
+- pip
+- pip:
+  - pkgdata

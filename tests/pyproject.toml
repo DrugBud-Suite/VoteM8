@@ -1,0 +1,86 @@
+[project]
+name = "My-New-Project-TestSuite"
+description = "A Placeholder Project Title"
+keywords = [
+    "First Keyword",
+    "Second Keyword",
+    "Third Keyword",
+    "Fourth Keyword",
+    "Fifth Keyword",
+    "Sixth Keyword",
+]
+classifiers = [
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Typing :: Typed",
+]
+maintainers = [
+    {name = "DrugM8", email = "alacournola+drugbud@gmail.com"},
+]
+requires-python = ">= 3.10"
+dependencies = [
+    "pytest == 8.3.3",
+    "coverage == 7.6.1",
+    "pytest-cov == 5.0.0",
+    "pytest-html == 4.1.1",
+    "pkgdata",
+]
+dynamic = [
+    "version",
+]
+license = {text = "MIT"}
+
+[project.urls]
+Homepage = "https://DrugBud-Suite.github.io/VoteM8"
+Source = "https://github.com/DrugBud-Suite/VoteM8"
+Download = "https://github.com/DrugBud-Suite/VoteM8/releases"
+Issue-Tracker = "https://github.com/DrugBud-Suite/VoteM8/issues"
+
+[project.scripts]
+My-New-Project-TestSuite = "my_new_project_testsuite:__main__"
+
+[build-system]
+requires = [
+    "setuptools >= 72.1.0",
+    "versioningit >= 3.1.2",
+]
+build-backend = "setuptools.build_meta"
+
+[tool]
+[tool.setuptools]
+include-package-data = true
+license-files = ["LICENSES/*", "COPYRIGHTS/*"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = true
+
+[tool.setuptools.cmdclass]
+build_py = "versioningit.cmdclass.build_py"
+sdist = "versioningit.cmdclass.sdist"
+
+[tool.versioningit]
+[tool.versioningit.vcs]
+method = "git"
+match = ["ver/[0-9]*.[0-9]*.[0-9]*"]
+default-tag = "ver/0.0.0"
+
+[tool.versioningit.tag2version]
+rmprefix = "ver/"
+
+[tool.versioningit.format]
+distance = "{base_version}+{distance}.{committer_date:%Y.%m.%d}.{rev}"
+dirty = "{base_version}+0.{committer_date:%Y.%m.%d}.{rev}.dirty"
+distance-dirty = "{base_version}+{distance}.{committer_date:%Y.%m.%d}.{rev}.dirty"
+
+[tool.versioningit.onbuild]
+method = "replace-version"
+regex = "^__version_details__: dict\\[str, str\\] = (?P<version>.*)"
+require-match = true
+source-file = "src/my_new_project_testsuite/__init__.py"
+build-file = "my_new_project_testsuite/__init__.py"
+replacement = "{{\n    \"version\": \"{version}\",\n    \"build_date\": \"{build_date:%Y.%m.%d}\",\n    \"committer_date\": \"{committer_date:%Y.%m.%d}\",\n    \"author_date\": \"{author_date:%Y.%m.%d}\",\n    \"branch\": \"{branch}\",\n    \"distance\": \"{distance}\",\n    \"commit_hash\": \"{revision}\",\n}}\n"
