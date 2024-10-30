@@ -1,0 +1,31 @@
+:root {
+	--pst-font-family-base: 'Quicksand', -apple-system, BlinkMacSystemFont, Segoe UI, "Helvetica Neue", Arial, sans-serif;
+	--pst-font-family-heading: 'Quicksand', -apple-system, BlinkMacSystemFont, Segoe UI, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Optional: Adjust font weights for different elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 600;
+}
+
+.navbar-brand {
+	font-weight: 500;
+}
+
+body {
+	font-weight: 400;
+}
+
+/* Optional: Adjust letter spacing for better readability */
+body {
+	letter-spacing: 0.01em;
+}
+
+.navbar-nav>.nav-item>.nav-link {
+	font-weight: 500;
+}

@@ -273,6 +273,9 @@ web:
         #    - https://github.com/pydata/pydata-sphinx-theme/issues/1385
         - '${{ theme.logo.simple.light.path_web }}$'
         - '${{ theme.logo.simple.dark.path_web }}$'
+      html_css_files:
+        - "https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        - "css/custom.css"
       html_secnumber_suffix: ". "
       html_extra_path: [ ]
       html_use_opensearch: ${{ web.url.base }}$
@@ -379,6 +382,9 @@ web:
     config:
       # https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/layout.html#references
       html_theme_options:
+        theme_variables:
+          font-family-base: 'Quicksand, -apple-system, BlinkMacSystemFont, Segoe UI, "Helvetica Neue", Arial, sans-serif'
+          font-family-heading: 'Quicksand, -apple-system, BlinkMacSystemFont, Segoe UI, "Helvetica Neue", Arial, sans-serif'
         # ---- Section Layout ----
         # -- Header --
         navbar_start: [ navbar-logo ]  # header left
