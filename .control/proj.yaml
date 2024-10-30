@@ -36,6 +36,6 @@ maintainer:
   code_owners:
     entries:
       - glob: "*"
-        owners: [ Tonylac77 ]
+        owners: [ owner ]
 citation:
   title: '${{ name }}$: ${{ title }}$'
