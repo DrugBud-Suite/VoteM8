@@ -15,6 +15,9 @@ SPDX-License-Identifier: MIT
 
 from votem8 import data
 
+from votem8.votem8 import (apply_consensus_scoring, get_available_methods,
+                           describe_method, add_consensus_method)
+
 __all__ = ["data", "__version_details__", "__version__"]
 
 __version_details__: dict[str, str] = {"version": "0.0.0"}
@@ -23,3 +26,11 @@ including version number, date, branch, and commit hash."""
 
 __version__: str = __version_details__["version"]
 """Version number of the currently installed package."""
+
+__author__ = "Antoine Lacour"
+__email__ = "alacournola+votem8@gmail.com"
+
+__all__ = [
+    "apply_consensus_scoring", "get_available_methods", "describe_method",
+    "add_consensus_method"
+]
