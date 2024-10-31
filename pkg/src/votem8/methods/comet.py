@@ -12,10 +12,9 @@ from pymcdm.methods import COMET, TOPSIS
 from pymcdm.methods.comet_tools import MethodExpert
 
 
-def comet_consensus(df: 'pd.DataFrame',
-                    columns: list,
-                    id_column: str = "ID",
-                    weights: list[float] | None = None) -> 'pd.DataFrame':
+def comet_consensus(
+    df: "pd.DataFrame", columns: list, id_column: str = "ID", weights: list[float] | None = None
+) -> "pd.DataFrame":
     """Calculates the COMET consensus score."""
     df = df[[id_column, *columns]].copy()
     values = df[columns].to_numpy()

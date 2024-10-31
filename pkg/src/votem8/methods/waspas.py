@@ -10,10 +10,9 @@ if TYPE_CHECKING:
     import pandas as pd
 
 
-def waspas_consensus(df: "pd.DataFrame",
-                     columns: list,
-                     id_column: str = "ID",
-                     weights: list | None = None) -> "pd.DataFrame":
+def waspas_consensus(
+    df: "pd.DataFrame", columns: list, id_column: str = "ID", weights: list | None = None
+) -> "pd.DataFrame":
     """Calculates the WASPAS consensus score."""
     df = df[[id_column, *columns]].copy()
     values = df[columns].to_numpy()

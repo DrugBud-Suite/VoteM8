@@ -24,8 +24,18 @@ from .wsm import wsm_consensus
 from .zscore import zscore_consensus
 
 __all__ = [
-    "aras_consensus", "binary_pareto_consensus", "comet_consensus",
-    "ecr_consensus", "pareto_consensus", "promethee_consensus",
-    "rbr_consensus", "rbv_consensus", "topsis_consensus", "vikor_consensus",
-    "waspas_consensus", "wpm_consensus", "wsm_consensus", "zscore_consensus"
+    "aras_consensus",
+    "binary_pareto_consensus",
+    "comet_consensus",
+    "ecr_consensus",
+    "pareto_consensus",
+    "promethee_consensus",
+    "rbr_consensus",
+    "rbv_consensus",
+    "topsis_consensus",
+    "vikor_consensus",
+    "waspas_consensus",
+    "wpm_consensus",
+    "wsm_consensus",
+    "zscore_consensus",
 ]

@@ -8,10 +8,9 @@ if TYPE_CHECKING:
     import pandas as pd
 
 
-def rbr_consensus(df: "pd.DataFrame",
-                  columns: list,
-                  id_column: str = "ID",
-                  weights: dict | list | None = None) -> "pd.DataFrame":
+def rbr_consensus(
+    df: "pd.DataFrame", columns: list, id_column: str = "ID", weights: dict | list | None = None
+) -> "pd.DataFrame":
     """Calculates the Rank by Rank (RbR) consensus score.
 
     Incorporating weights.
@@ -36,8 +35,7 @@ def rbr_consensus(df: "pd.DataFrame",
     # Handle weights
     if weights is not None:
         if isinstance(weights, dict):
-            weights_array = np.array([weights[col] for col in columns],
-                                     dtype=float)
+            weights_array = np.array([weights[col] for col in columns], dtype=float)
         else:
             weights_array = np.array(weights, dtype=float)
             if len(weights_array) != len(columns):
