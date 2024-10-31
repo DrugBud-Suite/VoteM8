@@ -7,3 +7,4 @@ pandas
 numpy
 rdkit
 pymcdm
+paretoset
