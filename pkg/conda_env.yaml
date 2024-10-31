@@ -4,10 +4,5 @@ channels:
 dependencies:
 - python
 - pip
-- rdkit
-- pandas
-- numpy
 - pip:
   - pkgdata
-  - pymcdm
-  - paretoset
