@@ -46,8 +46,6 @@ def parse_arguments() -> argparse.Namespace:
         default="raise",
         help="Strategy to handle NaN values",
     )
-        help="Strategy to handle NaN values",
-    )
     parser.add_argument(
         "--weights",
         type=str,
@@ -64,8 +62,6 @@ def parse_arguments() -> argparse.Namespace:
         "--log-level",
         choices=["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"],
         default="INFO",
-        help="Set the logging level",
-    )
         help="Set the logging level",
     )
     parser.add_argument(
@@ -95,7 +91,9 @@ def validate_methods(methods: str | list[str]) -> list[str]:
     if methods == ["all"]:
         return available_methods
 
-    invalid_methods = [method for method in methods if method not in available_methods]
+    invalid_methods = [
+        method for method in methods if method not in available_methods
+    ]
     if invalid_methods:
         error_message = (
             f"Unknown methods: {', '.join(invalid_methods)}. "
@@ -125,7 +123,6 @@ def parse_weights(weights_arg: str) -> dict | str | None:
     try:
         import json
 
-
         weights = json.loads(weights_arg)
         if isinstance(weights, dict):
             return weights
@@ -139,7 +136,8 @@ def parse_weights(weights_arg: str) -> dict | str | None:
 def run_cli() -> int:
     """Run the CLI application.
 
-    Returns:
+    Returns
+    -------
         int: Exit code (0 for success, non-zero for failure)
     """
     try:
@@ -180,9 +178,7 @@ def run_cli() -> int:
 
         logging.info("Results saved to %s", result)
 
-    except ValueError as e:
-        logging.exception(str(e))
-        logging.exception(str(e))
+    except ValueError:
         return 1  # Error
     except Exception:
         logging.exception("An error occurred during consensus scoring")

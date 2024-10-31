@@ -60,7 +60,6 @@ def add_consensus_method(name: str, method: Callable):
 
 
 def get_available_methods() -> list[str]:
-def get_available_methods() -> list[str]:
     """Return a list of available consensus methods."""
     return list(_METHODS.keys())
 
@@ -71,7 +70,8 @@ def load_and_validate_data(
         columns: list[str] | None = None) -> tuple[pd.DataFrame, list[str]]:
     """Load data and validate columns.
 
-    Parameters:
+    Parameters
+    ----------
     - data: Union[str, Path, pd.DataFrame]
     The data to be processed. Can be a file path or a DataFrame.
     - id_column: str
@@ -79,7 +79,8 @@ def load_and_validate_data(
     - columns: List[str], optional
     The columns to be used in scoring.
 
-    Returns:
+    Returns
+    -------
     - data: pd.DataFrame
     The loaded and validated DataFrame.
     - valid_columns: List[str]
@@ -104,22 +105,18 @@ def load_and_validate_data(
     # Filter columns if specified
     if columns:
         valid_columns = [
-            col
-            for col in columns
+            col for col in columns
             if col in data.columns and pd.api.types.is_numeric_dtype(data[col])
         ]
         if not valid_columns:
             logging.error(
                 "No valid numeric columns found in specified columns")
             msg = "None of the specified columns were found in the data or were numeric"
-            raise ValueError(
-                msg
-            )
+            raise ValueError(msg)
         data = data[[id_column, *valid_columns]]
     else:
         valid_columns = [
-            col
-            for col in data.columns
+            col for col in data.columns
             if col != id_column and pd.api.types.is_numeric_dtype(data[col])
         ]
 
@@ -136,7 +133,8 @@ def handle_nan_values(data: pd.DataFrame, valid_columns: list[str],
                       nan_strategy: str) -> pd.DataFrame:
     """Handle NaN values in the data based on the specified strategy.
 
-    Parameters:
+    Parameters
+    ----------
     - data: pd.DataFrame
     The DataFrame to process.
     - valid_columns: List[str]
@@ -144,21 +142,23 @@ def handle_nan_values(data: pd.DataFrame, valid_columns: list[str],
     - nan_strategy: str
     Strategy to handle NaN values ('raise', 'drop', 'fill_mean', 'fill_median', 'interpolate').
 
-    Returns:
+    Returns
+    -------
     - pd.DataFrame
     The DataFrame after handling NaN values.
     """
     if nan_strategy == 'raise':
         if data[valid_columns].isna().any().any():
             msg = "Input data contains NaN values in scoring columns"
-            raise ValueError(
-                msg)
+            raise ValueError(msg)
     elif nan_strategy == 'drop':
         data = data.dropna(subset=valid_columns)
     elif nan_strategy == "fill_mean":
-        data[valid_columns] = data[valid_columns].fillna(data[valid_columns].mean())
+        data[valid_columns] = data[valid_columns].fillna(
+            data[valid_columns].mean())
     elif nan_strategy == "fill_median":
-        data[valid_columns] = data[valid_columns].fillna(data[valid_columns].median())
+        data[valid_columns] = data[valid_columns].fillna(
+            data[valid_columns].median())
     elif nan_strategy == "interpolate":
         data[valid_columns] = data[valid_columns].interpolate()
     else:
@@ -173,7 +173,8 @@ def get_weights(data: pd.DataFrame, valid_columns: list[str],
                 weights: dict | str | None) -> np.ndarray | None:
     """Compute the weights for the scoring columns.
 
-    Parameters:
+    Parameters
+    ----------
     - data: pd.DataFrame
     The DataFrame containing the data.
     - valid_columns: List[str]
@@ -181,7 +182,8 @@ def get_weights(data: pd.DataFrame, valid_columns: list[str],
     - weights: Union[dict, str, None]
     Weights for the columns. Can be a dict or a string specifying a weighting method.
 
-    Returns:
+    Returns
+    -------
     - Optional[np.ndarray]
     The array of weights, or None if no weights are specified.
     """
@@ -194,7 +196,8 @@ def get_weights(data: pd.DataFrame, valid_columns: list[str],
                 msg = "Weights dict contains invalid columns"
                 raise ValueError(msg)
             # Map weights to valid_columns in order
-            weights_array = np.array([weights[col] for col in valid_columns], dtype=float)
+            weights_array = np.array([weights[col] for col in valid_columns],
+                                     dtype=float)
             # Normalize weights to sum to 1
             weights_array = weights_array / weights_array.sum()
         elif isinstance(weights, str):
@@ -229,13 +232,15 @@ def select_methods(methods: str | list[str],
                    available_methods: dict) -> list[Callable]:
     """Select consensus methods to apply.
 
-    Parameters:
+    Parameters
+    ----------
     - methods: Union[str, List[str]]
     The consensus methods to apply. Can be 'all' or a list of method names.
     - available_methods: dict
     Dictionary of available methods.
 
-    Returns:
+    Returns
+    -------
     - List[Callable]
     List of selected method functions.
     """
@@ -259,14 +264,18 @@ def select_methods(methods: str | list[str],
     return selected_methods
 
 
-def apply_selected_methods(data: pd.DataFrame, valid_columns: list[str],
-                           id_column: str, selected_methods: list[Callable],
-                           weights_array: np.ndarray | None,
-                           normalize: bool = True,
-                           aggregation: str = 'best') -> list[pd.DataFrame]:
+def apply_selected_methods(
+        data: pd.DataFrame,
+        valid_columns: list[str],
+        id_column: str,
+        selected_methods: list[Callable],
+        weights_array: np.ndarray | None,
+        normalize: bool = True,  # noqa: FBT001, FBT002
+        aggregation: str = 'best') -> list[pd.DataFrame]:
     """Apply the selected consensus methods to the data.
 
-    Parameters:
+    Parameters
+    ----------
     - data: pd.DataFrame
     The DataFrame containing the data.
     - valid_columns: List[str]
@@ -282,7 +291,8 @@ def apply_selected_methods(data: pd.DataFrame, valid_columns: list[str],
     - aggregation: str
     How to aggregate results ('best' or 'avg').
 
-    Returns:
+    Returns
+    -------
     - List[pd.DataFrame]
     List of DataFrames with the results from each method.
     """
@@ -291,26 +301,27 @@ def apply_selected_methods(data: pd.DataFrame, valid_columns: list[str],
         start_time = time.time()
         # Ensure the method accepts weights
         try:
-            result = method(data, valid_columns, id_column, weights=weights_array)
+            result = method(data,
+                            valid_columns,
+                            id_column,
+                            weights=weights_array)
         except TypeError:
             # If the method does not accept weights, call without weights
             result = method(data, valid_columns, id_column)
         end_time = time.time()
         execution_time = end_time - start_time
-        logging.info(
-            "Time taken for %s: %.4f seconds", method.__name__, execution_time)
+        logging.info("Time taken for %s: %.4f seconds", method.__name__,
+                     execution_time)
 
         score_column = [col for col in result.columns if col != id_column][-1]
         # Aggregate results
         if aggregation == "best":
-            result = (
-                result.sort_values(score_column, ascending=False)
-                .groupby(id_column)
-                .first(numeric_only=True)
-                .reset_index()
-            )
+            result = (result.sort_values(
+                score_column, ascending=False).groupby(id_column).first(
+                    numeric_only=True).reset_index())
         elif aggregation == "avg":
-            result = result.groupby(id_column).mean(numeric_only=True).reset_index()
+            result = result.groupby(id_column).mean(
+                numeric_only=True).reset_index()
         else:
             logging.error("aggregation must be 'best' or 'avg'")
             msg = "aggregation must be 'best' or 'avg'"
@@ -320,7 +331,8 @@ def apply_selected_methods(data: pd.DataFrame, valid_columns: list[str],
             min_score = result[score_column].min()
             max_score = result[score_column].max()
             if max_score != min_score:
-                result[score_column] = (result[score_column] - min_score) / (max_score - min_score)
+                result[score_column] = (result[score_column] -
+                                        min_score) / (max_score - min_score)
             else:
                 result[score_column] = 0  # or any appropriate value
 
@@ -335,21 +347,21 @@ def combine_results(results: list[pd.DataFrame],
                     id_column: str) -> pd.DataFrame:
     """Combine the results from different methods.
 
-    Parameters:
+    Parameters
+    ----------
     - results: List[pd.DataFrame]
     List of DataFrames with the results from each method.
     - id_column: str
     The column that contains the unique identifiers.
 
-    Returns:
+    Returns
+    -------
     - pd.DataFrame
     The combined DataFrame with results from all methods.
     """
     final_result = results[0]
     for result in results[1:]:
-        final_result = final_result.merge(result,
-                                          on=id_column,
-                                          how='outer')
+        final_result = final_result.merge(result, on=id_column, how='outer')
 
     # Sort the final result
     score_columns = [col for col in final_result.columns if col != id_column]
@@ -357,17 +369,18 @@ def combine_results(results: list[pd.DataFrame],
     return final_result.reset_index(drop=True)
 
 
-
 def save_results(final_result: pd.DataFrame, output: str | Path) -> Path:
     """Save the final results to the specified output file.
 
-    Parameters:
+    Parameters
+    ----------
     - final_result: pd.DataFrame
     The DataFrame containing the final results.
     - output: Union[str, Path]
     File path to save the results.
 
-    Returns:
+    Returns
+    -------
     - Path
     The output file path.
     """
@@ -382,14 +395,15 @@ def apply_consensus_scoring(
         methods: str | list[str] = 'all',
         columns: list[str] | None = None,
         id_column: str = 'ID',
-           aggregation: str = 'best',
-           nan_strategy: str = 'raise',
-           weights: dict | str | None = None,
-           output: str | Path | None = None,
-           normalize: bool = True) -> pd.DataFrame | Path:
+        aggregation: str = 'best',
+        nan_strategy: str = 'raise',
+        weights: dict | str | None = None,
+        output: str | Path | None = None,
+        normalize: bool = True) -> pd.DataFrame | Path:  # noqa: FBT001, FBT002
     """Apply consensus scoring methods to the provided data.
 
-    Parameters:
+    Parameters
+    ----------
     - data: Union[str, Path, pd.DataFrame]
     The data to be processed. Can be a file path or a DataFrame.
     - methods: Union[str, List[str]], default 'all'
@@ -409,7 +423,8 @@ def apply_consensus_scoring(
     - output: Union[str, Path], optional
     File path to save the results.
 
-    Returns:
+    Returns
+    -------
     - Union[pd.DataFrame, Path]
     The final scoring results as a DataFrame or the output file path.
     """
