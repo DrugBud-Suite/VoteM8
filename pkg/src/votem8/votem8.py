@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import logging
 import time
+from collections.abc import Callable
 from pathlib import Path
 from typing import TYPE_CHECKING
 
@@ -32,8 +33,7 @@ from votem8.methods.wsm import wsm_consensus
 from votem8.methods.zscore import zscore_consensus
 from votem8.utils.utils import load_data
 
-logging.basicConfig(level=logging.INFO,
-                    format='[%(asctime)s] %(levelname)-8s %(message)s')
+logging.basicConfig(level=logging.INFO, format="[%(asctime)s] %(levelname)-8s %(message)s")
 
 # Update method dictionary with new lowercase names
 _METHODS = {
@@ -59,6 +59,7 @@ def add_consensus_method(name: str, method: Callable):
     logging.info("Added %s to consensus methods.", name)
 
 
+def get_available_methods() -> list[str]:
 def get_available_methods() -> list[str]:
     """Return a list of available consensus methods."""
     return list(_METHODS.keys())
@@ -103,7 +104,8 @@ def load_and_validate_data(
     # Filter columns if specified
     if columns:
         valid_columns = [
-            col for col in columns
+            col
+            for col in columns
             if col in data.columns and pd.api.types.is_numeric_dtype(data[col])
         ]
         if not valid_columns:
@@ -116,7 +118,8 @@ def load_and_validate_data(
         data = data[[id_column, *valid_columns]]
     else:
         valid_columns = [
-            col for col in data.columns
+            col
+            for col in data.columns
             if col != id_column and pd.api.types.is_numeric_dtype(data[col])
         ]
 
@@ -152,13 +155,11 @@ def handle_nan_values(data: pd.DataFrame, valid_columns: list[str],
                 msg)
     elif nan_strategy == 'drop':
         data = data.dropna(subset=valid_columns)
-    elif nan_strategy == 'fill_mean':
-        data[valid_columns] = data[valid_columns].fillna(
-            data[valid_columns].mean())
-    elif nan_strategy == 'fill_median':
-        data[valid_columns] = data[valid_columns].fillna(
-            data[valid_columns].median())
-    elif nan_strategy == 'interpolate':
+    elif nan_strategy == "fill_mean":
+        data[valid_columns] = data[valid_columns].fillna(data[valid_columns].mean())
+    elif nan_strategy == "fill_median":
+        data[valid_columns] = data[valid_columns].fillna(data[valid_columns].median())
+    elif nan_strategy == "interpolate":
         data[valid_columns] = data[valid_columns].interpolate()
     else:
         logging.error("Invalid nan_strategy: %s", nan_strategy)
@@ -193,8 +194,7 @@ def get_weights(data: pd.DataFrame, valid_columns: list[str],
                 msg = "Weights dict contains invalid columns"
                 raise ValueError(msg)
             # Map weights to valid_columns in order
-            weights_array = np.array([weights[col] for col in valid_columns],
-                                     dtype=float)
+            weights_array = np.array([weights[col] for col in valid_columns], dtype=float)
             # Normalize weights to sum to 1
             weights_array = weights_array / weights_array.sum()
         elif isinstance(weights, str):
@@ -204,7 +204,7 @@ def get_weights(data: pd.DataFrame, valid_columns: list[str],
                 "entropy": w.entropy_weights,
                 "standard_deviation": w.standard_deviation_weights,
                 "gini": w.gini_weights,
-                "variance": w.variance_weights
+                "variance": w.variance_weights,
             }
             if weights.lower() in weighting_methods:
                 weighting_function = weighting_methods[weights.lower()]
@@ -291,10 +291,7 @@ def apply_selected_methods(data: pd.DataFrame, valid_columns: list[str],
         start_time = time.time()
         # Ensure the method accepts weights
         try:
-            result = method(data,
-                            valid_columns,
-                            id_column,
-                            weights=weights_array)
+            result = method(data, valid_columns, id_column, weights=weights_array)
         except TypeError:
             # If the method does not accept weights, call without weights
             result = method(data, valid_columns, id_column)
@@ -305,13 +302,15 @@ def apply_selected_methods(data: pd.DataFrame, valid_columns: list[str],
 
         score_column = [col for col in result.columns if col != id_column][-1]
         # Aggregate results
-        if aggregation == 'best':
-            result = result.sort_values(
-                score_column, ascending=False).groupby(id_column).first(
-                    numeric_only=True).reset_index()
-        elif aggregation == 'avg':
-            result = result.groupby(id_column).mean(
-                numeric_only=True).reset_index()
+        if aggregation == "best":
+            result = (
+                result.sort_values(score_column, ascending=False)
+                .groupby(id_column)
+                .first(numeric_only=True)
+                .reset_index()
+            )
+        elif aggregation == "avg":
+            result = result.groupby(id_column).mean(numeric_only=True).reset_index()
         else:
             logging.error("aggregation must be 'best' or 'avg'")
             msg = "aggregation must be 'best' or 'avg'"
@@ -321,8 +320,7 @@ def apply_selected_methods(data: pd.DataFrame, valid_columns: list[str],
             min_score = result[score_column].min()
             max_score = result[score_column].max()
             if max_score != min_score:
-                result[score_column] = (result[score_column] -
-                                        min_score) / (max_score - min_score)
+                result[score_column] = (result[score_column] - min_score) / (max_score - min_score)
             else:
                 result[score_column] = 0  # or any appropriate value
 
@@ -436,9 +434,9 @@ def apply_consensus_scoring(
     selected_methods = select_methods(methods, _METHODS)
 
     # Apply methods
-    results = apply_selected_methods(data, valid_columns, id_column,
-                                     selected_methods, weights_array,
-                                     normalize, aggregation)
+    results = apply_selected_methods(
+        data, valid_columns, id_column, selected_methods, weights_array, normalize, aggregation
+    )
 
     # Combine results
     logging.debug("Combining results")
@@ -448,6 +446,7 @@ def apply_consensus_scoring(
     logging.info("Consensus scoring completed successfully")
     if output:
         return save_results(final_result, output)
+    return final_result
     return final_result
 
 

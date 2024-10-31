@@ -32,5 +32,5 @@ def comet_consensus(df: 'pd.DataFrame',
     c_values = COMET.make_cvalues(values)
     expert = MethodExpert(TOPSIS(), weights, types)
     comet = COMET(c_values, expert)
-    df['COMET'] = comet(values, weights, types)
-    return df[[id_column, 'COMET']]
+    df["COMET"] = comet(values, weights, types)
+    return df[[id_column, "COMET"]]

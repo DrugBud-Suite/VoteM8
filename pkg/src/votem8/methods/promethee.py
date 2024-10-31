@@ -26,7 +26,7 @@ def promethee_consensus(df: "pd.DataFrame",
         weights_array = np.array(weights, dtype=float)
         # Normalize weights to sum to 1
         weights_array = weights_array / weights_array.sum()
-    promethee = PROMETHEE_II('usual')
+    promethee = PROMETHEE_II("usual")
     types = np.ones(len(columns))
-    df['PROMETHEE_II'] = promethee(values, weights, types)
-    return df[[id_column, 'PROMETHEE_II']]
+    df["PROMETHEE_II"] = promethee(values, weights, types)
+    return df[[id_column, "PROMETHEE_II"]]

@@ -7365,7 +7365,25 @@
             "votem8/__main__.py": "pkg/src/votem8/__main__.py",
             "votem8/data/__init__.py": "pkg/src/votem8/data/__init__.py",
             "votem8/exception/__init__.py": "pkg/src/votem8/exception/__init__.py",
-            "votem8/exception/data.py": "pkg/src/votem8/exception/data.py"
+            "votem8/exception/data.py": "pkg/src/votem8/exception/data.py",
+            "votem8/methods/__init__.py": "pkg/src/votem8/methods/__init__.py",
+            "votem8/methods/aras.py": "pkg/src/votem8/methods/aras.py",
+            "votem8/methods/binary_pareto.py": "pkg/src/votem8/methods/binary_pareto.py",
+            "votem8/methods/comet.py": "pkg/src/votem8/methods/comet.py",
+            "votem8/methods/ecr.py": "pkg/src/votem8/methods/ecr.py",
+            "votem8/methods/pareto.py": "pkg/src/votem8/methods/pareto.py",
+            "votem8/methods/promethee.py": "pkg/src/votem8/methods/promethee.py",
+            "votem8/methods/rbr.py": "pkg/src/votem8/methods/rbr.py",
+            "votem8/methods/rbv.py": "pkg/src/votem8/methods/rbv.py",
+            "votem8/methods/topsis.py": "pkg/src/votem8/methods/topsis.py",
+            "votem8/methods/vikor.py": "pkg/src/votem8/methods/vikor.py",
+            "votem8/methods/waspas.py": "pkg/src/votem8/methods/waspas.py",
+            "votem8/methods/wpm.py": "pkg/src/votem8/methods/wpm.py",
+            "votem8/methods/wsm.py": "pkg/src/votem8/methods/wsm.py",
+            "votem8/methods/zscore.py": "pkg/src/votem8/methods/zscore.py",
+            "votem8/utils/__init__.py": "pkg/src/votem8/utils/__init__.py",
+            "votem8/utils/utils.py": "pkg/src/votem8/utils/utils.py",
+            "votem8/votem8.py": "pkg/src/votem8/votem8.py"
          },
          "pull_template": {
             "default": ".github/pull_request_template.md"

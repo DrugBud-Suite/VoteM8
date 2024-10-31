@@ -11,16 +11,14 @@ from votem8 import __version__, apply_consensus_scoring, get_available_methods
 def parse_arguments() -> argparse.Namespace:
     """Parse command-line arguments for the VoteM8 Consensus Scoring CLI.
 
-    Returns:
+    Returns
+    -------
     - argparse.Namespace
         The parsed arguments.
     """
-    parser = argparse.ArgumentParser(
-        description="VoteM8 Consensus Scoring CLI")
+    parser = argparse.ArgumentParser(description="VoteM8 Consensus Scoring CLI")
 
-    parser.add_argument("input_file",
-                        type=Path,
-                        help="Path to input CSV or SDF file")
+    parser.add_argument("input_file", type=Path, help="Path to input CSV or SDF file")
     parser.add_argument(
         "--methods",
         nargs="+",
@@ -48,6 +46,8 @@ def parse_arguments() -> argparse.Namespace:
         default="raise",
         help="Strategy to handle NaN values",
     )
+        help="Strategy to handle NaN values",
+    )
     parser.add_argument(
         "--weights",
         type=str,
@@ -66,6 +66,8 @@ def parse_arguments() -> argparse.Namespace:
         default="INFO",
         help="Set the logging level",
     )
+        help="Set the logging level",
+    )
     parser.add_argument(
         "--version",
         action="version",
@@ -78,11 +80,13 @@ def parse_arguments() -> argparse.Namespace:
 def validate_methods(methods: str | list[str]) -> list[str]:
     """Validate the provided methods against available methods.
 
-    Parameters:
+    Parameters
+    ----------
     - methods: Union[str, List[str]]
         Methods provided by the user.
 
-    Returns:
+    Returns
+    -------
     - List[str]
         List of valid methods.
     """
@@ -91,9 +95,7 @@ def validate_methods(methods: str | list[str]) -> list[str]:
     if methods == ["all"]:
         return available_methods
 
-    invalid_methods = [
-        method for method in methods if method not in available_methods
-    ]
+    invalid_methods = [method for method in methods if method not in available_methods]
     if invalid_methods:
         error_message = (
             f"Unknown methods: {', '.join(invalid_methods)}. "
@@ -106,11 +108,13 @@ def validate_methods(methods: str | list[str]) -> list[str]:
 def parse_weights(weights_arg: str) -> dict | str | None:
     """Parse the weights argument provided by the user.
 
-    Parameters:
+    Parameters
+    ----------
     - weights_arg: str
         Weights provided by the user.
 
-    Returns:
+    Returns
+    -------
     - Union[dict, str, None]
         Parsed weights as a dict or a weighting method name.
     """
@@ -120,6 +124,7 @@ def parse_weights(weights_arg: str) -> dict | str | None:
     # Try to parse as JSON
     try:
         import json
+
 
         weights = json.loads(weights_arg)
         if isinstance(weights, dict):
@@ -161,10 +166,22 @@ def run_cli() -> int:
             weights=weights,
             output=args.output,
         )
+        result = apply_consensus_scoring(
+            data=args.input_file,
+            methods=methods,
+            columns=args.columns,
+            id_column=args.id_column,
+            normalize=args.normalize,
+            aggregation=args.aggregation,
+            nan_strategy=args.nan_strategy,
+            weights=weights,
+            output=args.output,
+        )
 
         logging.info("Results saved to %s", result)
 
     except ValueError as e:
+        logging.exception(str(e))
         logging.exception(str(e))
         return 1  # Error
     except Exception:

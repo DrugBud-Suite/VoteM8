@@ -28,5 +28,5 @@ def waspas_consensus(df: "pd.DataFrame",
         weights_array = weights_array / weights_array.sum()
     waspas = WASPAS()
     types = np.ones(len(columns))
-    df['WASPAS'] = waspas(values, weights, types, l=0.5)
-    return df[[id_column, 'WASPAS']]
+    df["WASPAS"] = waspas(values, weights, types, l=0.5)
+    return df[[id_column, "WASPAS"]]

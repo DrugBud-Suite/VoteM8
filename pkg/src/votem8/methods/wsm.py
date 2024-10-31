@@ -28,5 +28,5 @@ def wsm_consensus(df: "pd.DataFrame",
         weights_array = weights_array / weights_array.sum()
     wsm = WSM()
     types = np.ones(len(columns))
-    df['WSM'] = wsm(values, weights, types)
-    return df[[id_column, 'WSM']]
+    df["WSM"] = wsm(values, weights, types)
+    return df[[id_column, "WSM"]]

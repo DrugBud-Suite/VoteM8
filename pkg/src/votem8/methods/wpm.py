@@ -28,5 +28,5 @@ def wpm_consensus(df: "pd.DataFrame",
         weights_array = weights_array / weights_array.sum()
     wpm = WPM()
     types = np.ones(len(columns))
-    df['WPM'] = wpm(values, weights, types)
-    return df[[id_column, 'WPM']]
+    df["WPM"] = wpm(values, weights, types)
+    return df[[id_column, "WPM"]]

@@ -29,5 +29,5 @@ def vikor_consensus(df: "pd.DataFrame",
         weights_array = weights_array / weights_array.sum()
     vikor = VIKOR()
     types = np.ones(len(columns))
-    df['VIKOR'] = rrankdata(vikor(values, weights, types, v=0.5))
-    return df[[id_column, 'VIKOR']]
+    df["VIKOR"] = rrankdata(vikor(values, weights, types, v=0.5))
+    return df[[id_column, "VIKOR"]]

@@ -32,5 +32,5 @@ def topsis_consensus(df: "pd.DataFrame",
         weights_array = weights_array / weights_array.sum()
     topsis = TOPSIS()
     types = np.ones(len(columns))
-    df['TOPSIS'] = topsis(values, weights, types)
-    return df[[id_column, 'TOPSIS']]
+    df["TOPSIS"] = topsis(values, weights, types)
+    return df[[id_column, "TOPSIS"]]

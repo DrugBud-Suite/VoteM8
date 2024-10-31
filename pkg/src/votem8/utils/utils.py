@@ -10,6 +10,9 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+
+import numpy as np
+import pandas as pd
 from rdkit import Chem
 from rdkit.Chem import PandasTools
 
@@ -28,7 +31,7 @@ def load_data(file_path: str | Path) -> pd.DataFrame:
     """
     file_path = Path(file_path)
 
-    if file_path.suffix.lower() == '.csv':
+    if file_path.suffix.lower() == ".csv":
         return pd.read_csv(file_path)
     if file_path.suffix.lower() == '.sdf':
         return load_sdf(file_path)
@@ -45,13 +48,10 @@ def load_sdf(file_path: Path) -> pd.DataFrame:
     Returns:
         pd.DataFrame: Loaded data with RDKit molecules.
     """
-    df = PandasTools.LoadSDF(str(file_path),
-                             molColName='ROMol',
-                             includeFingerprints=False)
+    df = PandasTools.LoadSDF(str(file_path), molColName="ROMol", includeFingerprints=False)
 
     # Convert RDKit molecules to SMILES strings
-    df['SMILES'] = df['ROMol'].apply(lambda x: Chem.MolToSmiles(x)
-                                     if x is not None else None)
+    df["SMILES"] = df["ROMol"].apply(lambda x: Chem.MolToSmiles(x) if x is not None else None)
 
     # Drop the ROMol column as it's not easily serializable
     return df.drop('ROMol', axis=1)
@@ -101,12 +101,11 @@ def weigh_dataframe(df: pd.DataFrame,
         lcm_denominator = reduce(lambda a, b: a * b // gcd(a, b), denominators)
 
         # Scale fractions to have common denominator and get integer weights
-        integer_weights = [
-            int(fraction * lcm_denominator) for fraction in fractions
-        ]
+        integer_weights = [int(fraction * lcm_denominator) for fraction in fractions]
 
         # Now replicate columns according to integer weights
         replicated_columns = []
+        for col, weight in zip(columns, integer_weights, strict=False):
         for col, weight in zip(columns, integer_weights, strict=False):
             replicated_columns.extend([col] * weight)
         # Create new DataFrame with replicated columns

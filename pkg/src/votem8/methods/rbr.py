@@ -16,14 +16,16 @@ def rbr_consensus(df: "pd.DataFrame",
 
     Incorporating weights.
 
-    Parameters:
+    Parameters
+    ----------
     - df (pd.DataFrame): Input DataFrame.
     - columns (list): List of column names to consider.
     - id_column (str): Name of the ID column (default: "ID").
     - weights: dict or array-like, optional.
     Weights for the criteria.
 
-    Returns:
+    Returns
+    -------
     - pd.DataFrame: DataFrame with original ID column and new 'RbR' column.
     """
     df = df[[id_column, *columns]].copy()
@@ -44,9 +46,9 @@ def rbr_consensus(df: "pd.DataFrame",
         # Normalize weights
         weights_array = weights_array / weights_array.sum()
         # Compute weighted average of ranks
-        df['RbR'] = (ranks * weights_array).sum(axis=1)
+        df["RbR"] = (ranks * weights_array).sum(axis=1)
     else:
         # Compute unweighted mean of ranks
-        df['RbR'] = ranks.mean(axis=1)
+        df["RbR"] = ranks.mean(axis=1)
 
-    return df[[id_column, 'RbR']]
+    return df[[id_column, "RbR"]]
