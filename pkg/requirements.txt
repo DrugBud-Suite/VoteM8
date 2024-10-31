@@ -1,1 +1,6 @@
 pkgdata
+pandas
+numpy
+rdkit
+pymcdm
+paretoset
