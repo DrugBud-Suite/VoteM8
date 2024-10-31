@@ -1,52 +1,40 @@
-import pandas as pd
+"""Exponential Consensus Ranking implementation."""
+
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
+
 import numpy as np
 
+if TYPE_CHECKING:
 
-def ECR(
-    df: pd.DataFrame,
-    columns: list,
+    import pandas as pd
+    from numpy.typing import NDArray
+
+
+def ecr_consensus(
+    data: pd.DataFrame,
+    columns: list[str],
     id_column: str = "ID",
-    weights=None,
+    weights: dict[str, float] | NDArray[np.float64] | None = None
 ) -> pd.DataFrame:
-    """
-    Calculates the Exponential Consensus Ranking (ECR) score,
-    incorporating weights.
+    """Calculate the ECR consensus score."""
+    scoring_data = data[[id_column, *columns]].copy()
+    sigma = 0.05 * len(scoring_data)
+    ranks = scoring_data[columns].rank(method="average", ascending=False)
 
-    Parameters:
-    - df (pd.DataFrame): Input DataFrame.
-    - columns (list): List of column names to consider.
-    - id_column (str): Name of the ID column (default: "ID").
-    - weights: dict or array-like, optional.
-        Weights for the criteria.
-
-    Returns:
-    - pd.DataFrame: DataFrame with original ID column and new 'ECR' column.
-    """
-    df = df[[id_column] + columns].copy()
-    sigma = 0.05 * len(df)
-
-    # Compute ranks
-    ranks = df[columns].rank(method="average", ascending=False)
-
-    # Handle weights
     if weights is not None:
         if isinstance(weights, dict):
             weights_array = np.array([weights[col] for col in columns],
                                      dtype=float)
         else:
             weights_array = np.array(weights, dtype=float)
-            if len(weights_array) != len(columns):
-                raise ValueError(
-                    "Length of weights must match number of columns")
-        # Normalize weights
         weights_array = weights_array / weights_array.sum()
-        # Multiply ecr_scores by weights after exponentiation
         ecr_scores = np.exp(-ranks / sigma)
         weighted_ecr_scores = ecr_scores * weights_array
-        df['ECR'] = weighted_ecr_scores.sum(axis=1) / sigma
+        scoring_data['ECR'] = weighted_ecr_scores.sum(axis=1) / sigma
     else:
-        # Compute ECR without weights
         ecr_scores = np.exp(-ranks / sigma)
-        df['ECR'] = ecr_scores.sum(axis=1) / sigma
+        scoring_data['ECR'] = ecr_scores.sum(axis=1) / sigma
 
-    return df[[id_column, 'ECR']]
+    return scoring_data[[id_column, 'ECR']]

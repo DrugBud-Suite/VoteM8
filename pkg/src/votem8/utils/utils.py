@@ -1,24 +1,28 @@
-import pandas as pd
+"""This module provides utility functions for loading and processing data.
+
+Including functions to load data from CSV or SDF files and to weigh dataframes.
+"""
+
+from fractions import Fraction
+from functools import reduce
+from math import gcd
 from pathlib import Path
-from typing import Union
+
+import numpy as np
+import pandas as pd
 from rdkit import Chem
 from rdkit.Chem import PandasTools
-import numpy as np
-from math import gcd
-from functools import reduce
-from fractions import Fraction
 
 
-def load_data(file_path: Union[str, Path]) -> pd.DataFrame:
-    """
-    Load data from CSV or SDF file.
-    
+def load_data(file_path: str | Path) -> pd.DataFrame:
+    """Load data from CSV or SDF file.
+
     Args:
         file_path (Union[str, Path]): Path to the input file.
-    
+
     Returns:
         pd.DataFrame: Loaded data.
-    
+
     Raises:
         ValueError: If the file format is not supported.
     """
@@ -26,19 +30,18 @@ def load_data(file_path: Union[str, Path]) -> pd.DataFrame:
 
     if file_path.suffix.lower() == '.csv':
         return pd.read_csv(file_path)
-    elif file_path.suffix.lower() == '.sdf':
+    if file_path.suffix.lower() == '.sdf':
         return load_sdf(file_path)
-    else:
-        raise ValueError(f"Unsupported file format: {file_path.suffix}")
+    msg = f"Unsupported file format: {file_path.suffix}"
+    raise ValueError(msg)
 
 
 def load_sdf(file_path: Path) -> pd.DataFrame:
-    """
-    Load data from an SDF file.
-    
+    """Load data from an SDF file.
+
     Args:
         file_path (Path): Path to the SDF file.
-    
+
     Returns:
         pd.DataFrame: Loaded data with RDKit molecules.
     """
@@ -51,20 +54,31 @@ def load_sdf(file_path: Path) -> pd.DataFrame:
                                      if x is not None else None)
 
     # Drop the ROMol column as it's not easily serializable
-    df = df.drop('ROMol', axis=1)
-
-    return df
+    return df.drop('ROMol', axis=1)
 
 
 def weigh_dataframe(df: pd.DataFrame,
                     columns: list,
                     id_column: str = "ID",
-                    weights=None) -> pd.DataFrame:
+                    weights: dict | list | None = None) -> pd.DataFrame:
+    """Weigh and replicate columns in a dataframe based on specified weights.
+
+    Args:
+        df (pd.DataFrame): The input dataframe.
+        columns (list): List of columns to weigh and replicate.
+        id_column (str, optional): The column to use as an identifier. Defaults to "ID".
+        weights (dict or array-like, optional): Weights for the columns. Defaults to None.
+
+    Returns:
+        pd.DataFrame: The dataframe with replicated columns based on weights.
+
+    Raises:
+        ValueError: If the id_column is not in the dataframe or if the length of weights does not match the number of columns.
+    """
     # Ensure id_column is in the dataframe
     if id_column not in df.columns:
-        raise ValueError(
-            f"The specified id_column '{id_column}' is not present in the dataframe."
-        )
+        msg = f"The specified id_column '{id_column}' is not present in the dataframe."
+        raise ValueError(msg)
 
     # Handle weights
     if weights is not None:
@@ -75,8 +89,8 @@ def weigh_dataframe(df: pd.DataFrame,
             # Assume weights is an array-like object
             weights_list = list(weights)
             if len(weights_list) != len(columns):
-                raise ValueError(
-                    "Length of weights must match number of columns")
+                msg = "Length of weights must match number of columns"
+                raise ValueError(msg)
         # Normalize weights
         weights_array = np.array(weights_list, dtype=float)
         weights_array = weights_array / weights_array.sum()
@@ -93,7 +107,7 @@ def weigh_dataframe(df: pd.DataFrame,
 
         # Now replicate columns according to integer weights
         replicated_columns = []
-        for col, weight in zip(columns, integer_weights):
+        for col, weight in zip(columns, integer_weights, strict=False):
             replicated_columns.extend([col] * weight)
         # Create new DataFrame with replicated columns
         df_replicated = df[[id_column]].copy()
@@ -101,11 +115,9 @@ def weigh_dataframe(df: pd.DataFrame,
             df_replicated[f"{col}_{idx}"] = df[col]
     else:
         # If no weights provided, use original columns
-        df_replicated = df[columns + [id_column]].copy()
+        df_replicated = df[[*columns, id_column]].copy()
 
     # Ensure id_column is the first column
     cols = df_replicated.columns.tolist()
     cols.remove(id_column)
-    df_replicated = df_replicated[[id_column] + cols]
-
-    return df_replicated
+    return df_replicated[[id_column, *cols]]

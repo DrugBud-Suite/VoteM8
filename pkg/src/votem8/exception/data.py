@@ -26,6 +26,15 @@ class DataFileNotFoundError(_PackageError):
         path_relative: str,
         path_absolute: Path,
     ):
+        """Initialize the DataFileNotFoundError.
+
+        Parameters
+        ----------
+        path_relative : str
+            Path to the file relative to the package's data directory.
+        path_absolute : Path
+            Absolute path to the file.
+        """
         self.path_relative = path_relative
         self.path_absolute = path_absolute
         super().__init__(

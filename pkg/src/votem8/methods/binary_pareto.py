@@ -1,31 +1,35 @@
-import pandas as pd
+"""Binary Pareto optimization consensus scoring implementation."""
+
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    import numpy as np
+    import pandas as pd
+
 from paretoset import paretoset
-from ..utils.utils import weigh_dataframe
+
+from votem8.utils.utils import weigh_dataframe
+
+if TYPE_CHECKING:
+
+    from numpy.typing import NDArray
 
 
-def BinaryPareto(df: pd.DataFrame,
-                 columns: list,
-                 id_column: str = "ID",
-                 weights=None) -> pd.DataFrame:
-    """
-	Assigns a binary value (1 or 0) to solutions based on Pareto optimality.
-	
-	Args:
-	df (pd.DataFrame): Input DataFrame
-	columns (list): List of column names to consider for Pareto optimality
-	id_column (str): Name of the ID column (default: "ID")
-	
-	Returns:
-	pd.DataFrame: DataFrame with original ID column and new 'BinaryPareto' column
-	"""
-    df = df[[id_column] + columns].copy()
-    weighted_df = weigh_dataframe(df, columns, id_column, weights)
-    criteria_columns = weighted_df.columns.drop(id_column, errors='ignore')
+def binary_pareto_consensus(
+    data: pd.DataFrame,
+    columns: list[str],
+    id_column: str = "ID",
+    weights: dict[str, float] | NDArray[np.float64] | None = None
+) -> pd.DataFrame:
+    """Calculate binary Pareto optimization score."""
+    scoring_data = data[[id_column, *columns]].copy()
+    weighted_data = weigh_dataframe(scoring_data, columns, id_column, weights)
+    criteria_columns = weighted_data.columns.drop(id_column, errors='ignore')
     sense = ["max"] * len(criteria_columns)
-    mask = paretoset(weighted_df[criteria_columns], sense=sense)
+    mask = paretoset(weighted_data[criteria_columns], sense=sense)
 
-    # Create 'BinaryPareto' column and assign values
-    weighted_df['BinaryPareto'] = 0
-    weighted_df.loc[mask, 'BinaryPareto'] = 1
-
-    return weighted_df[[id_column, 'BinaryPareto']]
+    weighted_data['BinaryPareto'] = 0
+    weighted_data.loc[mask, 'BinaryPareto'] = 1
+    return weighted_data[[id_column, 'BinaryPareto']]

@@ -4,14 +4,12 @@ import argparse
 import logging
 import sys
 from pathlib import Path
-from typing import List, Union
 
 from votem8 import __version__, apply_consensus_scoring, get_available_methods
 
 
 def parse_arguments() -> argparse.Namespace:
-    """
-    Parse command-line arguments for the VoteM8 Consensus Scoring CLI.
+    """Parse command-line arguments for the VoteM8 Consensus Scoring CLI.
 
     Returns:
     - argparse.Namespace
@@ -27,17 +25,20 @@ def parse_arguments() -> argparse.Namespace:
         "--methods",
         nargs="+",
         default=["all"],
-        help="Consensus methods to apply. Use 'all' for all methods.")
+        help="Consensus methods to apply. Use 'all' for all methods.",
+    )
     parser.add_argument("--columns",
                         nargs="+",
                         help="Columns to consider for scoring")
     parser.add_argument("--id-column",
                         default="ID",
                         help="Name of the ID column")
-    parser.add_argument("--aggregation",
-                        choices=["best", "avg"],
-                        default="best",
-                        help="Aggregation method: 'best' or 'avg'")
+    parser.add_argument(
+        "--aggregation",
+        choices=["best", "avg"],
+        default="best",
+        help="Aggregation method: 'best' or 'avg'",
+    )
     parser.add_argument("--normalize",
                         action="store_true",
                         help="Enable normalization of results")
@@ -45,22 +46,26 @@ def parse_arguments() -> argparse.Namespace:
         "--nan-strategy",
         choices=["raise", "drop", "fill_mean", "fill_median", "interpolate"],
         default="raise",
-        help="Strategy to handle NaN values")
+        help="Strategy to handle NaN values",
+    )
     parser.add_argument(
         "--weights",
         type=str,
         help=
-        "Weights for the columns. Can be a JSON string or a weighting method name."
+        "Weights for the columns. Can be a JSON string or a weighting method name.",
     )
-    parser.add_argument("--output",
-                        type=Path,
-                        default=Path("consensus_results.csv"),
-                        help="Output file path")
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=Path("consensus_results.csv"),
+        help="Output file path",
+    )
     parser.add_argument(
         "--log-level",
         choices=["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"],
         default="INFO",
-        help="Set the logging level")
+        help="Set the logging level",
+    )
     parser.add_argument(
         "--version",
         action="version",
@@ -70,9 +75,8 @@ def parse_arguments() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def validate_methods(methods: Union[str, List[str]]) -> List[str]:
-    """
-    Validate the provided methods against available methods.
+def validate_methods(methods: str | list[str]) -> list[str]:
+    """Validate the provided methods against available methods.
 
     Parameters:
     - methods: Union[str, List[str]]
@@ -91,16 +95,16 @@ def validate_methods(methods: Union[str, List[str]]) -> List[str]:
         method for method in methods if method not in available_methods
     ]
     if invalid_methods:
-        raise ValueError(
+        error_message = (
             f"Unknown methods: {', '.join(invalid_methods)}. "
             f"Available methods are: {', '.join(available_methods)}")
+        raise ValueError(error_message)
 
     return methods
 
 
-def parse_weights(weights_arg: str) -> Union[dict, str, None]:
-    """
-    Parse the weights argument provided by the user.
+def parse_weights(weights_arg: str) -> dict | str | None:
+    """Parse the weights argument provided by the user.
 
     Parameters:
     - weights_arg: str
@@ -116,6 +120,7 @@ def parse_weights(weights_arg: str) -> Union[dict, str, None]:
     # Try to parse as JSON
     try:
         import json
+
         weights = json.loads(weights_arg)
         if isinstance(weights, dict):
             return weights
@@ -127,9 +132,8 @@ def parse_weights(weights_arg: str) -> Union[dict, str, None]:
 
 
 def run_cli() -> int:
-    """
-    Run the CLI application.
-    
+    """Run the CLI application.
+
     Returns:
         int: Exit code (0 for success, non-zero for failure)
     """
@@ -146,25 +150,28 @@ def run_cli() -> int:
         weights = parse_weights(args.weights)
 
         # Apply consensus scoring
-        result = apply_consensus_scoring(data=args.input_file,
-                                         methods=methods,
-                                         columns=args.columns,
-                                         id_column=args.id_column,
-                                         normalize=args.normalize,
-                                         aggregation=args.aggregation,
-                                         nan_strategy=args.nan_strategy,
-                                         weights=weights,
-                                         output=args.output)
+        result = apply_consensus_scoring(
+            data=args.input_file,
+            methods=methods,
+            columns=args.columns,
+            id_column=args.id_column,
+            normalize=args.normalize,
+            aggregation=args.aggregation,
+            nan_strategy=args.nan_strategy,
+            weights=weights,
+            output=args.output,
+        )
 
-        print(f"Results saved to {result}")
-        return 0  # Success
+        logging.info("Results saved to %s", result)
 
     except ValueError as e:
-        logging.error(str(e))
+        logging.exception(str(e))
         return 1  # Error
-    except Exception as e:
-        logging.error(f"An error occurred during consensus scoring: {e}")
+    except Exception:
+        logging.exception("An error occurred during consensus scoring")
         return 2  # Unexpected error
+    else:
+        return 0  # Success
 
 
 if __name__ == "__main__":

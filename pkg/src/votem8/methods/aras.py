@@ -1,28 +1,40 @@
-import pandas as pd
+"""ARAS (Additive Ratio Assessment) consensus scoring implementation."""
+
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
+
 import numpy as np
-from pymcdm.methods import ARAS
 from pymcdm import weights as w
+from pymcdm.methods import ARAS
+
+if TYPE_CHECKING:
+
+    import pandas as pd
+    from numpy.typing import NDArray
 
 
-def ARAS_consensus(df: pd.DataFrame,
-                   columns: list,
-                   id_column: str = "ID",
-                   weights=None) -> pd.DataFrame:
-    """
-    Calculates the ARAS (ARAS) consensus score.
-    """
-    df = df[[id_column] + columns].copy()
-    values = df[columns].to_numpy()
-    # Handle weights
+def aras_consensus(
+    data: pd.DataFrame,
+    columns: list[str],
+    id_column: str = "ID",
+    weights: dict[str, float] | NDArray[np.float64] | None = None
+) -> pd.DataFrame:
+    """Calculate the ARAS consensus score."""
+    scoring_data = data[[id_column, *columns]].copy()
+    values = scoring_data[columns].to_numpy()
+
     if weights is None:
-        # Use equal weights if none are provided
         weights_array = w.equal_weights(values)
     else:
-        # Ensure weights are mapped correctly to columns
-        weights_array = np.array(weights, dtype=float)
-        # Normalize weights to sum to 1
+        if isinstance(weights, dict):
+            weights_array = np.array([weights[col] for col in columns],
+                                     dtype=float)
+        else:
+            weights_array = np.array(weights, dtype=float)
         weights_array = weights_array / weights_array.sum()
+
     aras = ARAS()
     types = np.ones(len(columns))
-    df['ARAS'] = aras(values, weights, types)
-    return df[[id_column, 'ARAS']]
+    scoring_data['ARAS'] = aras(values, weights_array, types)
+    return scoring_data[[id_column, 'ARAS']]

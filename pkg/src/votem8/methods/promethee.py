@@ -1,17 +1,21 @@
-import pandas as pd
+"""This module contains the implementation of the PROMETHEE II consensus score calculation."""
+
+from typing import TYPE_CHECKING
+
 import numpy as np
-from pymcdm.methods import PROMETHEE_II
 from pymcdm import weights as w
+from pymcdm.methods import PROMETHEE_II
+
+if TYPE_CHECKING:
+    import pandas as pd
 
 
-def PROMETHEE_II_consensus(df: pd.DataFrame,
-                           columns: list,
-                           id_column: str = "ID",
-                           weights=None) -> pd.DataFrame:
-    """
-    Calculates the PROMETHEE II consensus score.
-    """
-    df = df[[id_column] + columns].copy()
+def promethee_consensus(df: "pd.DataFrame",
+                        columns: list,
+                        id_column: str = "ID",
+                        weights: list | None = None) -> "pd.DataFrame":
+    """Calculates the PROMETHEE II consensus score."""
+    df = df[[id_column, *columns]].copy()
     values = df[columns].to_numpy()
     # Handle weights
     if weights is None:

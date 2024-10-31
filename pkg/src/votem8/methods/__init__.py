@@ -1,25 +1,31 @@
-"""
-Consensus scoring methods implementations.
+"""VoteM8 consensus scoring methods implementation.
+
+This module provides various consensus scoring algorithms including ARAS, TOPSIS,
+VIKOR, and others for combining multiple scoring criteria into unified rankings.
+Each method implements a specific approach to consensus scoring with support for
+weighted criteria and different aggregation strategies.
 """
 
-from .aras import ARAS_consensus
-from .binary_pareto import BinaryPareto
-from .comet import COMET_consensus
-from .ecr import ECR
-from .pareto import Pareto
-from .promethee import PROMETHEE_II_consensus
-from .rbr import RbR
-from .rbv import RbV
-from .topsis import TOPSIS_consensus
-from .vikor import VIKOR_consensus
-from .waspas import WASPAS_consensus
-from .wpm import WPM_consensus
-from .wsm import WSM_consensus
-from .zscore import Zscore
+from __future__ import annotations
+
+from .aras import aras_consensus
+from .binary_pareto import binary_pareto_consensus
+from .comet import comet_consensus
+from .ecr import ecr_consensus
+from .pareto import pareto_consensus
+from .promethee import promethee_consensus
+from .rbr import rbr_consensus
+from .rbv import rbv_consensus
+from .topsis import topsis_consensus
+from .vikor import vikor_consensus
+from .waspas import waspas_consensus
+from .wpm import wpm_consensus
+from .wsm import wsm_consensus
+from .zscore import zscore_consensus
 
 __all__ = [
-    "ARAS_consensus", "BinaryPareto", "COMET_consensus", "ECR", "Pareto",
-    "PROMETHEE_II_consensus", "RbR", "RbV", "TOPSIS_consensus",
-    "VIKOR_consensus", "WASPAS_consensus", "WPM_consensus", "WSM_consensus",
-    "Zscore"
+    "aras_consensus", "binary_pareto_consensus", "comet_consensus",
+    "ecr_consensus", "pareto_consensus", "promethee_consensus",
+    "rbr_consensus", "rbv_consensus", "topsis_consensus", "vikor_consensus",
+    "waspas_consensus", "wpm_consensus", "wsm_consensus", "zscore_consensus"
 ]

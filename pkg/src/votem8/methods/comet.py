@@ -1,19 +1,23 @@
-import pandas as pd
+"""This module provides a function to calculate the COMET consensus score."""
+
+from typing import TYPE_CHECKING
+
 import numpy as np
-from pymcdm.methods import COMET, TOPSIS
+
+if TYPE_CHECKING:
+    import pandas as pd
+
 from pymcdm import weights as w
-from pymcdm.helpers import rrankdata
+from pymcdm.methods import COMET, TOPSIS
 from pymcdm.methods.comet_tools import MethodExpert
 
 
-def COMET_consensus(df: pd.DataFrame,
+def comet_consensus(df: 'pd.DataFrame',
                     columns: list,
                     id_column: str = "ID",
-                    weights=None) -> pd.DataFrame:
-    """
-    Calculates the COMET consensus score.
-    """
-    df = df[[id_column] + columns].copy()
+                    weights: list[float] | None = None) -> 'pd.DataFrame':
+    """Calculates the COMET consensus score."""
+    df = df[[id_column, *columns]].copy()
     values = df[columns].to_numpy()
     # Handle weights
     if weights is None:

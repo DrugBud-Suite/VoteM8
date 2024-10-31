@@ -1,17 +1,25 @@
-import pandas as pd
+"""TOPSIS consensus scoring implementation.
+
+Implements the Technique for Order of Preference by Similarity to Ideal Solution
+(TOPSIS) method for consensus scoring.
+"""
+
+from typing import TYPE_CHECKING
+
 import numpy as np
-from pymcdm.methods import TOPSIS
 from pymcdm import weights as w
+from pymcdm.methods import TOPSIS
+
+if TYPE_CHECKING:
+    import pandas as pd
 
 
-def TOPSIS_consensus(df: pd.DataFrame,
+def topsis_consensus(df: "pd.DataFrame",
                      columns: list,
                      id_column: str = "ID",
-                     weights=None) -> pd.DataFrame:
-    """
-    Calculates the TOPSIS consensus score.
-    """
-    df = df[[id_column] + columns].copy()
+                     weights: list | None = None) -> "pd.DataFrame":
+    """Calculates the TOPSIS consensus score."""
+    df = df[[id_column, *columns]].copy()
     values = df[columns].to_numpy()
     # Handle weights
     if weights is None:

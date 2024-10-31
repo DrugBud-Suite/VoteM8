@@ -1,17 +1,21 @@
-import pandas as pd
+"""This module provides a function to calculate the WPM consensus score."""
+
+from typing import TYPE_CHECKING
+
 import numpy as np
-from pymcdm.methods import WPM
 from pymcdm import weights as w
+from pymcdm.methods import WPM
+
+if TYPE_CHECKING:
+    import pandas as pd
 
 
-def WPM_consensus(df: pd.DataFrame,
+def wpm_consensus(df: "pd.DataFrame",
                   columns: list,
                   id_column: str = "ID",
-                  weights=None) -> pd.DataFrame:
-    """
-    Calculates the WPM consensus score.
-    """
-    df = df[[id_column] + columns].copy()
+                  weights: list | None = None) -> "pd.DataFrame":
+    """Calculates the WPM consensus score."""
+    df = df[[id_column, *columns]].copy()
     values = df[columns].to_numpy()
     # Handle weights
     if weights is None:

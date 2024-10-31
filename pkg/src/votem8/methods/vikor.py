@@ -1,18 +1,22 @@
-import pandas as pd
+"""This module provides a function to calculate the VIKOR consensus score."""
+
+from typing import TYPE_CHECKING
+
 import numpy as np
-from pymcdm.methods import VIKOR
 from pymcdm import weights as w
 from pymcdm.helpers import rrankdata
+from pymcdm.methods import VIKOR
+
+if TYPE_CHECKING:
+    import pandas as pd
 
 
-def VIKOR_consensus(df: pd.DataFrame,
+def vikor_consensus(df: "pd.DataFrame",
                     columns: list,
                     id_column: str = "ID",
-                    weights=None) -> pd.DataFrame:
-    """
-    Calculates the VIKOR consensus score.
-    """
-    df = df[[id_column] + columns].copy()
+                    weights: list | None = None) -> "pd.DataFrame":
+    """Calculates the VIKOR consensus score."""
+    df = df[[id_column, *columns]].copy()
     values = df[columns].to_numpy()
     # Handle weights
     if weights is None:
